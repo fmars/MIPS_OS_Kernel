@@ -1,0 +1,4597 @@
+
+;; Function myoutput (myoutput, funcdef_no=0, decl_uid=941, cgraph_uid=0)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) print.c:24# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:24#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) print.c:24# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:24# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:24# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ arg+0 S4 A32])
+        (reg:SI 4 $4 [ arg ])) print.c:24# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ s+0 S4 A32])
+        (reg:SI 5 $5 [ s ])) print.c:24# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ l+0 S4 A32])
+        (reg:SI 6 $6 [ l ])) print.c:24# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 3 $3 [199])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ l+0 S4 A32])) print.c:28# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [200])
+        (const_int 1 [0x1])) print.c:28# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [199])
+                (reg:SI 2 $2 [200]))
+            (label_ref #)
+            (pc))) print.c:28# {*branch_equalitysi}
+     (nil)
+ -> 2)
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [201])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ s+0 S4 A32])) print.c:28# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:28# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1282 ] [194])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [201]) [ *s_3(D)+0 S1 A8]))) print.c:28# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:28# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [orig:194 D.1282 ] [194])
+                (const_int 0 [0]))
+            (label_ref:SI #)
+            (pc))) print.c:28# {*branch_equalitysi}
+     (nil)
+ -> 6)
+(code_label 2 0 0 2 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])
+        (const_int 0 [0])) print.c:30# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:30# {*jump_absolute}
+     (nil)
+ -> 4)
+(barrier 0 0 0)
+(code_label 5 0 0 5 "" [1 uses])
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 i.41 ] [195])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])) print.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [202])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ s+0 S4 A32])) print.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:31# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:196 D.1286 ] [196])
+        (plus:SI (reg:SI 3 $3 [202])
+            (reg:SI 2 $2 [orig:195 i.41 ] [195]))) print.c:31# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:197 D.1287 ] [197])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [orig:196 D.1286 ] [196]) [ *D.1286_7+0 S1 A8]))) print.c:31# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:31# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 2 $2 [orig:198 D.1288 ] [198])) print.c:31# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printcharc") [flags 0x41] <function_decl # printcharc>) [ printcharc S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:31# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [204])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])) print.c:30# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:30# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [203])
+        (plus:SI (reg:SI 2 $2 [204])
+            (const_int 1 [0x1]))) print.c:30# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [203])) print.c:30# {*movsi_internal}
+     (nil))
+(code_label 4 0 0 4 "" [1 uses])
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [205])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])) print.c:30# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [206])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ l+0 S4 A32])) print.c:30# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:30# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [207])
+        (lt:SI (reg:SI 3 $3 [205])
+            (reg:SI 2 $2 [206]))) print.c:30# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [207])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:30# {*branch_equalitysi}
+     (nil)
+ -> 5)
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 1)
+(barrier 0 0 0)
+(code_label 6 0 0 6 "" [1 uses])
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (const_int 0 [0]) print.c:28# {nop}
+     (nil))
+(code_label 1 0 0 1 "" [1 uses])
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:34#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:34# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])) print.c:34# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])) print.c:34# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:34#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))) print.c:34# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (expr_list:REG_CFA_RESTORE (reg:SI 31 $31)
+                (nil)))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:34# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function printf (printf, funcdef_no=1, decl_uid=923, cgraph_uid=1)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) print.c:38# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:38#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) print.c:38# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:38# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:38# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ S4 A8])
+        (reg:SI 5 $5)) print.c:38# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ S4 A8])
+        (reg:SI 6 $6)) print.c:38# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ S4 A8])
+        (reg:SI 7 $7)) print.c:38# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ fmt+0 S4 A32])
+        (reg:SI 4 $4 [ fmt ])) print.c:38# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [195])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 36 [0x24]))) print.c:40# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ MEM[(void * *)&ap]+0 S4 A64])
+        (reg:SI 2 $2 [195])) print.c:40# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:194 ap.40 ] [194])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ ap+0 S4 A64])) print.c:41# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (const_int 0 [0])) print.c:41# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ fmt+0 S4 A32])) print.c:41# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (reg/f:SI 2 $2 [orig:194 ap.40 ] [194])) print.c:41# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("lp_Print") [flags 0x3] <function_decl # lp_Print>) [ lp_Print S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:41# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:43#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:43# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])) print.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])) print.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:43#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))) print.c:43# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (expr_list:REG_CFA_RESTORE (reg:SI 31 $31)
+                (nil)))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:43# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function _panic (_panic, funcdef_no=2, decl_uid=927, cgraph_uid=2)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) print.c:47# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:47#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) print.c:47# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:47# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:47# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ file+0 S4 A32])
+        (reg:SI 4 $4 [ file ])) print.c:47# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ line+0 S4 A32])
+        (reg:SI 5 $5 [ line ])) print.c:47# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ S4 A8])
+        (reg:SI 7 $7)) print.c:47# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ fmt+0 S4 A32])
+        (reg:SI 6 $6 [ fmt ])) print.c:47# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [195])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 44 [0x2c]))) print.c:51# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ MEM[(void * *)&ap]+0 S4 A64])
+        (reg:SI 2 $2 [195])) print.c:51# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [196])
+        (high:SI (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>))) print.c:52# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [196])
+            (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>))) print.c:52# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>)
+        (nil)))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ file+0 S4 A32])) print.c:52# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ line+0 S4 A32])) print.c:52# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printf") [flags 0x3] <function_decl # printf>) [ printf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:52# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:194 ap.39 ] [194])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ ap+0 S4 A64])) print.c:53# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (const_int 0 [0])) print.c:53# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ fmt+0 S4 A32])) print.c:53# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (reg/f:SI 2 $2 [orig:194 ap.39 ] [194])) print.c:53# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("lp_Print") [flags 0x3] <function_decl # lp_Print>) [ lp_Print S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:53# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(insn# 0 0 (set (reg:SI 2 $2 [197])
+        (high:SI (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>))) print.c:54# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [197])
+            (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>))) print.c:54# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>)
+        (nil)))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printf") [flags 0x3] <function_decl # printf>) [ printf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:54# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(code_label 9 0 0 9 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:58# {*jump_absolute}
+     (nil)
+ -> 9)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function lp_Print (lp_Print, funcdef_no=3, decl_uid=931, cgraph_uid=3)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -168 [0xffffffffffffff58]))) print.c:98# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:98#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 164 [0xa4])) [ S4 A32])
+        (reg:SI 31 $31)) print.c:98# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 164 [0xa4])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 160 [0xa0])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:98# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 160 [0xa0])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:98# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])
+        (reg:SI 4 $4 [ arg ])) print.c:98# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 5 $5 [ fmt ])) print.c:98# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 6 $6 [ ap ])) print.c:98# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(code_label 51 0 0 51 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [250])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:128# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:128# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 60 [0x3c])) [ fmtStart+0 S4 A32])
+        (reg/f:SI 2 $2 [250])) print.c:128# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:129# {*jump_absolute}
+     (nil)
+ -> 11)
+(barrier 0 0 0)
+(code_label 13 0 0 13 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [252])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:130# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:130# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [251])
+        (plus:SI (reg:SI 2 $2 [252])
+            (const_int 1 [0x1]))) print.c:130# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [251])) print.c:130# {*movsi_internal}
+     (nil))
+(code_label 11 0 0 11 "" [1 uses])
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [253])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:129# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:129# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1180 ] [194])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [253]) [ *fmt_2+0 S1 A8]))) print.c:129# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:129# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [orig:194 D.1180 ] [194])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:129# {*branch_equalitysi}
+     (nil)
+ -> 12)
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [254])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:129# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:129# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:195 D.1182 ] [195])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [254]) [ *fmt_2+0 S1 A8]))) print.c:129# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [255])
+        (const_int 37 [0x25])) print.c:129# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:195 D.1182 ] [195])
+                (reg:SI 2 $2 [255]))
+            (label_ref #)
+            (pc))) print.c:129# {*branch_equalitysi}
+     (nil)
+ -> 13)
+(code_label 12 0 0 12 "" [1 uses])
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 fmt.17 ] [196])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:134# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:197 fmtStart.18 ] [197])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 60 [0x3c])) [ fmtStart+0 S4 A32])) print.c:134# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:134# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:198 D.1185 ] [198])
+        (minus:SI (reg:SI 3 $3 [orig:196 fmt.17 ] [196])
+            (reg:SI 2 $2 [orig:197 fmtStart.18 ] [197]))) print.c:134# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:134# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 60 [0x3c])) [ fmtStart+0 S4 A32])) print.c:134# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (reg:SI 2 $2 [orig:198 D.1185 ] [198])) print.c:134# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:134# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(insn# 0 0 (set (reg/f:SI 2 $2 [256])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:137# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:137# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:199 D.1186 ] [199])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [256]) [ *fmt_2+0 S1 A8]))) print.c:137# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:137# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [orig:199 D.1186 ] [199])
+                (const_int 0 [0]))
+            (label_ref:SI #)
+            (pc))) print.c:137# {*branch_equalitysi}
+     (nil)
+ -> 53)
+(code_label 14 0 0 14 "" [0 uses])
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [258])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:141# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:141# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [257])
+        (plus:SI (reg:SI 2 $2 [258])
+            (const_int 1 [0x1]))) print.c:141# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [257])) print.c:141# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [259])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:144# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:144# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:200 D.1189 ] [200])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [259]) [ *fmt_44+0 S1 A8]))) print.c:144# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [260])
+        (const_int 108 [0x6c])) print.c:144# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:200 D.1189 ] [200])
+                (reg:SI 2 $2 [260]))
+            (label_ref #)
+            (pc))) print.c:144# {*branch_equalitysi}
+     (nil)
+ -> 16)
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [261])
+        (const_int 1 [0x1])) print.c:145# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])
+        (reg:SI 2 $2 [261])) print.c:145# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [263])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:146# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:146# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [262])
+        (plus:SI (reg:SI 2 $2 [263])
+            (const_int 1 [0x1]))) print.c:146# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [262])) print.c:146# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 17)
+(barrier 0 0 0)
+(code_label 16 0 0 16 "" [1 uses])
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])
+        (const_int 0 [0])) print.c:148# {*movsi_internal}
+     (nil))
+(code_label 17 0 0 17 "" [1 uses])
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])
+        (const_int 0 [0])) print.c:152# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [264])
+        (const_int -1 [0xffffffffffffffff])) print.c:153# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 48 [0x30])) [ prec+0 S4 A32])
+        (reg:SI 2 $2 [264])) print.c:153# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])
+        (const_int 0 [0])) print.c:154# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:QI 2 $2 [265])
+        (const_int 32 [0x20])) print.c:155# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ padc+0 S1 A8])
+        (reg:QI 2 $2 [265])) print.c:155# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [266])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:157# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:157# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:201 D.1193 ] [201])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [266]) [ *fmt_3+0 S1 A8]))) print.c:157# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [267])
+        (const_int 45 [0x2d])) print.c:157# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:201 D.1193 ] [201])
+                (reg:SI 2 $2 [267]))
+            (label_ref #)
+            (pc))) print.c:157# {*branch_equalitysi}
+     (nil)
+ -> 18)
+(note# 0 0 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [268])
+        (const_int 1 [0x1])) print.c:158# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])
+        (reg:SI 2 $2 [268])) print.c:158# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [270])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:159# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:159# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [269])
+        (plus:SI (reg:SI 2 $2 [270])
+            (const_int 1 [0x1]))) print.c:159# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [269])) print.c:159# {*movsi_internal}
+     (nil))
+(code_label 18 0 0 18 "" [1 uses])
+(note# 0 0 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [271])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:162# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:162# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:202 D.1196 ] [202])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [271]) [ *fmt_4+0 S1 A8]))) print.c:162# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [272])
+        (const_int 48 [0x30])) print.c:162# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:202 D.1196 ] [202])
+                (reg:SI 2 $2 [272]))
+            (label_ref #)
+            (pc))) print.c:162# {*branch_equalitysi}
+     (nil)
+ -> 19)
+(note# 0 0 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [273])
+        (const_int 48 [0x30])) print.c:163# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ padc+0 S1 A8])
+        (reg:QI 2 $2 [273])) print.c:163# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [275])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:164# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:164# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [274])
+        (plus:SI (reg:SI 2 $2 [275])
+            (const_int 1 [0x1]))) print.c:164# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [274])) print.c:164# {*movsi_internal}
+     (nil))
+(code_label 19 0 0 19 "" [1 uses])
+(note# 0 0 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [276])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:167# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:167# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:203 D.1199 ] [203])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [276]) [ *fmt_5+0 S1 A8]))) print.c:167# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:167# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [277])
+        (leu:SI (reg:SI 2 $2 [orig:203 D.1199 ] [203])
+            (const_int 47 [0x2f]))) print.c:167# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [277])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:167# {*branch_equalitysi}
+     (nil)
+ -> 20)
+(note# 0 0 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [278])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:167# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:167# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:204 D.1202 ] [204])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [278]) [ *fmt_5+0 S1 A8]))) print.c:167# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:167# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [279])
+        (leu:SI (reg:SI 2 $2 [orig:204 D.1202 ] [204])
+            (const_int 57 [0x39]))) print.c:167# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [279])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:167# {*branch_equalitysi}
+     (nil)
+ -> 20)
+(note# 0 0 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:168# {*jump_absolute}
+     (nil)
+ -> 21)
+(barrier 0 0 0)
+(code_label 22 0 0 22 "" [1 uses])
+(note# 0 0 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [280])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:169# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:169# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [282])
+        (ashift:SI (reg:SI 2 $2 [281])
+            (const_int 1 [0x1]))) print.c:169# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [283])
+        (ashift:SI (reg:SI 2 $2 [281])
+            (const_int 2 [0x2]))) print.c:169# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:207 D.1205 ] [207])
+        (plus:SI (reg:SI 2 $2 [281])
+            (reg:SI 3 $3 [283]))) print.c:169# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [284])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:169# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:169# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:208 D.1206 ] [208])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [284]) [ *fmt_6+0 S1 A8]))) print.c:169# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:169# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:210 D.1208 ] [210])
+        (plus:SI (reg:SI 2 $2 [orig:209 D.1207 ] [209])
+            (const_int -48 [0xffffffffffffffd0]))) print.c:169# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [285])
+        (plus:SI (reg:SI 3 $3 [orig:207 D.1205 ] [207])
+            (reg:SI 2 $2 [orig:210 D.1208 ] [210]))) print.c:169# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])
+        (reg:SI 2 $2 [285])) print.c:169# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [287])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:169# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:169# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [286])
+        (plus:SI (reg:SI 2 $2 [287])
+            (const_int 1 [0x1]))) print.c:169# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [286])) print.c:169# {*movsi_internal}
+     (nil))
+(code_label 21 0 0 21 "" [1 uses])
+(note# 0 0 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [288])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:168# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:168# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:205 D.1209 ] [205])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [288]) [ *fmt_6+0 S1 A8]))) print.c:168# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:168# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [289])
+        (leu:SI (reg:SI 2 $2 [orig:205 D.1209 ] [205])
+            (const_int 47 [0x2f]))) print.c:168# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [289])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:168# {*branch_equalitysi}
+     (nil)
+ -> 20)
+(note# 0 0 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [290])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:168# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:168# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:206 D.1211 ] [206])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [290]) [ *fmt_6+0 S1 A8]))) print.c:168# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:168# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [291])
+        (leu:SI (reg:SI 2 $2 [orig:206 D.1211 ] [206])
+            (const_int 57 [0x39]))) print.c:168# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [291])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:168# {*branch_equalitysi}
+     (nil)
+ -> 22)
+(code_label 20 0 0 20 "" [3 uses])
+(note# 0 0 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [292])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:173# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:173# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:211 D.1212 ] [211])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [292]) [ *fmt_7+0 S1 A8]))) print.c:173# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [293])
+        (const_int 46 [0x2e])) print.c:173# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:211 D.1212 ] [211])
+                (reg:SI 2 $2 [293]))
+            (label_ref #)
+            (pc))) print.c:173# {*branch_equalitysi}
+     (nil)
+ -> 23)
+(note# 0 0 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [295])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:174# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:174# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [294])
+        (plus:SI (reg:SI 2 $2 [295])
+            (const_int 1 [0x1]))) print.c:174# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [294])) print.c:174# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [296])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:175# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:175# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:212 D.1215 ] [212])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [296]) [ *fmt_70+0 S1 A8]))) print.c:175# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:175# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [297])
+        (leu:SI (reg:SI 2 $2 [orig:212 D.1215 ] [212])
+            (const_int 47 [0x2f]))) print.c:175# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [297])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:175# {*branch_equalitysi}
+     (nil)
+ -> 23)
+(note# 0 0 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [298])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:175# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:175# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:213 D.1218 ] [213])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [298]) [ *fmt_70+0 S1 A8]))) print.c:175# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:175# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [299])
+        (leu:SI (reg:SI 2 $2 [orig:213 D.1218 ] [213])
+            (const_int 57 [0x39]))) print.c:175# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [299])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:175# {*branch_equalitysi}
+     (nil)
+ -> 23)
+(note# 0 0 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 48 [0x30])) [ prec+0 S4 A32])
+        (const_int 0 [0])) print.c:176# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:177# {*jump_absolute}
+     (nil)
+ -> 24)
+(barrier 0 0 0)
+(code_label 25 0 0 25 "" [1 uses])
+(note# 0 0 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [300])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 48 [0x30])) [ prec+0 S4 A32])) print.c:178# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:178# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [302])
+        (ashift:SI (reg:SI 2 $2 [301])
+            (const_int 1 [0x1]))) print.c:178# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [303])
+        (ashift:SI (reg:SI 2 $2 [301])
+            (const_int 2 [0x2]))) print.c:178# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:216 D.1221 ] [216])
+        (plus:SI (reg:SI 2 $2 [301])
+            (reg:SI 3 $3 [303]))) print.c:178# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [304])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:178# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:178# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:217 D.1222 ] [217])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [304]) [ *fmt_8+0 S1 A8]))) print.c:178# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:178# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:219 D.1224 ] [219])
+        (plus:SI (reg:SI 2 $2 [orig:218 D.1223 ] [218])
+            (const_int -48 [0xffffffffffffffd0]))) print.c:178# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [305])
+        (plus:SI (reg:SI 3 $3 [orig:216 D.1221 ] [216])
+            (reg:SI 2 $2 [orig:219 D.1224 ] [219]))) print.c:178# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 48 [0x30])) [ prec+0 S4 A32])
+        (reg:SI 2 $2 [305])) print.c:178# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [307])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:178# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:178# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [306])
+        (plus:SI (reg:SI 2 $2 [307])
+            (const_int 1 [0x1]))) print.c:178# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [306])) print.c:178# {*movsi_internal}
+     (nil))
+(code_label 24 0 0 24 "" [1 uses])
+(note# 0 0 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [308])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:177# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:177# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:214 D.1225 ] [214])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [308]) [ *fmt_8+0 S1 A8]))) print.c:177# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:177# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [309])
+        (leu:SI (reg:SI 2 $2 [orig:214 D.1225 ] [214])
+            (const_int 47 [0x2f]))) print.c:177# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [309])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:177# {*branch_equalitysi}
+     (nil)
+ -> 23)
+(note# 0 0 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [310])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:177# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:177# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:215 D.1227 ] [215])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [310]) [ *fmt_8+0 S1 A8]))) print.c:177# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:177# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [311])
+        (leu:SI (reg:SI 2 $2 [orig:215 D.1227 ] [215])
+            (const_int 57 [0x39]))) print.c:177# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [311])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:177# {*branch_equalitysi}
+     (nil)
+ -> 25)
+(code_label 23 0 0 23 "" [4 uses])
+(note# 0 0 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ negFlag+0 S4 A32])
+        (const_int 0 [0])) print.c:185# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [312])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:186# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:186# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:220 D.1228 ] [220])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [312]) [ *fmt_9+0 S1 A8]))) print.c:186# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:186# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [313])
+        (leu:SI (reg:SI 2 $2 [orig:221 D.1229 ] [221])
+            (const_int 120 [0x78]))) print.c:186# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 3 $3 [313])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:186# {*branch_equalitysi}
+     (nil)
+ -> 26)
+(note# 0 0 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [314])
+        (ashift:SI (reg:SI 2 $2 [orig:221 D.1229 ] [221])
+            (const_int 2 [0x2]))) print.c:186# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [317])
+        (high:SI (label_ref:SI #))) print.c:186# {*movsi_internal}
+     (insn_list:REG_LABEL_OPERAND # (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [316])
+        (lo_sum:SI (reg:SI 2 $2 [317])
+            (label_ref:SI #))) print.c:186# {*lowsi}
+     (insn_list:REG_LABEL_OPERAND # (expr_list:REG_EQUAL (label_ref:SI #)
+            (nil))))
+(insn# 0 0 (set (reg/f:SI 2 $2 [315])
+        (plus:SI (reg:SI 3 $3 [314])
+            (reg:SI 2 $2 [316]))) print.c:186# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [318])
+        (mem/u/c:SI (reg/f:SI 2 $2 [315]) [ S4 A32])) print.c:186# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:186# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (set (pc)
+                (reg:SI 2 $2 [318]))
+            (use (label_ref #))
+        ]) print.c:186# {tablejump_si}
+     (nil)
+ -> 36)
+(barrier 0 0 0)
+(code_label 36 0 0 36 "" [3 uses])
+(jump_insn# 0 0 (addr_vec:SI [
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+            (label_ref:SI #)
+        ]) print.c:186#
+     (nil))
+(barrier 0 0 0)
+(code_label 32 0 0 32 "" [1 uses])
+(note# 0 0 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [319])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:188# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:188# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [319])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:188# {*branch_equalitysi}
+     (nil)
+ -> 37)
+(note# 0 0 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:222 ap.19 ] [222])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:189# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:189# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [320])
+        (plus:SI (reg/f:SI 2 $2 [orig:222 ap.19 ] [222])
+            (const_int 4 [0x4]))) print.c:189# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [320])) print.c:189# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [321])
+        (mem:SI (reg/f:SI 2 $2 [orig:222 ap.19 ] [222]) [ MEM[(long int *)ap.19_85]+0 S4 A32])) print.c:189# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:189# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [321])) print.c:189# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 38)
+(barrier 0 0 0)
+(code_label 37 0 0 37 "" [1 uses])
+(note# 0 0 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:223 ap.20 ] [223])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:191# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:191# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [322])
+        (plus:SI (reg/f:SI 2 $2 [orig:223 ap.20 ] [223])
+            (const_int 4 [0x4]))) print.c:191# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [322])) print.c:191# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [323])
+        (mem:SI (reg/f:SI 2 $2 [orig:223 ap.20 ] [223]) [ MEM[(int *)ap.20_88]+0 S4 A32])) print.c:191# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:191# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [323])) print.c:191# {*movsi_internal}
+     (nil))
+(code_label 38 0 0 38 "" [1 uses])
+(note# 0 0 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:224 num.21 ] [224])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:225 D.1236 ] [225])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:193# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [324])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:193# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [325])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:193# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [325])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [326])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:193# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [326])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:225 D.1236 ] [225])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (const_int 0 [0])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [324])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:224 num.21 ] [224])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 2 [0x2])) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) print.c:193# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:193# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:193# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [327])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:194# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:194# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [327])) print.c:194# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:194# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:194# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:195# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 28 0 0 28 "" [2 uses])
+(note# 0 0 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [328])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:199# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:199# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [328])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:199# {*branch_equalitysi}
+     (nil)
+ -> 40)
+(note# 0 0 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:226 ap.22 ] [226])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:200# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:200# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [329])
+        (plus:SI (reg/f:SI 2 $2 [orig:226 ap.22 ] [226])
+            (const_int 4 [0x4]))) print.c:200# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [329])) print.c:200# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [330])
+        (mem:SI (reg/f:SI 2 $2 [orig:226 ap.22 ] [226]) [ MEM[(long int *)ap.22_94]+0 S4 A32])) print.c:200# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:200# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [330])) print.c:200# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 41)
+(barrier 0 0 0)
+(code_label 40 0 0 40 "" [1 uses])
+(note# 0 0 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:227 ap.23 ] [227])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:202# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:202# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [331])
+        (plus:SI (reg/f:SI 2 $2 [orig:227 ap.23 ] [227])
+            (const_int 4 [0x4]))) print.c:202# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [331])) print.c:202# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [332])
+        (mem:SI (reg/f:SI 2 $2 [orig:227 ap.23 ] [227]) [ MEM[(int *)ap.23_97]+0 S4 A32])) print.c:202# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:202# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [332])) print.c:202# {*movsi_internal}
+     (nil))
+(code_label 41 0 0 41 "" [1 uses])
+(note# 0 0 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [333])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:204# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:204# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ge (reg:SI 2 $2 [333])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:204# {*branch_ordersi}
+     (nil)
+ -> 42)
+(note# 0 0 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [335])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:205# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:205# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [334])
+        (neg:SI (reg:SI 2 $2 [335]))) print.c:205# {negsi2}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [334])) print.c:205# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [336])
+        (const_int 1 [0x1])) print.c:206# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ negFlag+0 S4 A32])
+        (reg:SI 2 $2 [336])) print.c:206# {*movsi_internal}
+     (nil))
+(code_label 42 0 0 42 "" [1 uses])
+(note# 0 0 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:228 num.24 ] [228])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:229 D.1245 ] [229])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:208# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [337])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:208# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [338])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:208# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [338])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [339])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:208# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [339])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:229 D.1245 ] [229])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (const_int 0 [0])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [337])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:228 num.24 ] [228])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 10 [0xa])) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ negFlag+0 S4 A32])) print.c:208# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:208# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:208# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [340])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:209# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:209# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [340])) print.c:209# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:209# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:209# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:210# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 29 0 0 29 "" [2 uses])
+(note# 0 0 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [341])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:214# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:214# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [341])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:214# {*branch_equalitysi}
+     (nil)
+ -> 43)
+(note# 0 0 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:230 ap.25 ] [230])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:215# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:215# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [342])
+        (plus:SI (reg/f:SI 2 $2 [orig:230 ap.25 ] [230])
+            (const_int 4 [0x4]))) print.c:215# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [342])) print.c:215# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [343])
+        (mem:SI (reg/f:SI 2 $2 [orig:230 ap.25 ] [230]) [ MEM[(long int *)ap.25_105]+0 S4 A32])) print.c:215# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:215# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [343])) print.c:215# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 44)
+(barrier 0 0 0)
+(code_label 43 0 0 43 "" [1 uses])
+(note# 0 0 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:231 ap.26 ] [231])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:217# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:217# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [344])
+        (plus:SI (reg/f:SI 2 $2 [orig:231 ap.26 ] [231])
+            (const_int 4 [0x4]))) print.c:217# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [344])) print.c:217# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [345])
+        (mem:SI (reg/f:SI 2 $2 [orig:231 ap.26 ] [231]) [ MEM[(int *)ap.26_108]+0 S4 A32])) print.c:217# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:217# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [345])) print.c:217# {*movsi_internal}
+     (nil))
+(code_label 44 0 0 44 "" [1 uses])
+(note# 0 0 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:232 num.27 ] [232])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:233 D.1252 ] [233])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:219# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [346])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:219# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [347])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:219# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [347])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [348])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:219# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [348])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:233 D.1252 ] [233])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (const_int 0 [0])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [346])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:232 num.27 ] [232])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 8 [0x8])) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) print.c:219# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:219# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:219# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [349])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:220# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:220# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [349])) print.c:220# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:220# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:220# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:221# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 30 0 0 30 "" [2 uses])
+(note# 0 0 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [350])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:225# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:225# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [350])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:225# {*branch_equalitysi}
+     (nil)
+ -> 45)
+(note# 0 0 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:234 ap.28 ] [234])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:226# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:226# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [351])
+        (plus:SI (reg/f:SI 2 $2 [orig:234 ap.28 ] [234])
+            (const_int 4 [0x4]))) print.c:226# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [351])) print.c:226# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [352])
+        (mem:SI (reg/f:SI 2 $2 [orig:234 ap.28 ] [234]) [ MEM[(long int *)ap.28_114]+0 S4 A32])) print.c:226# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:226# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [352])) print.c:226# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 46)
+(barrier 0 0 0)
+(code_label 45 0 0 45 "" [1 uses])
+(note# 0 0 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:235 ap.29 ] [235])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:228# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:228# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [353])
+        (plus:SI (reg/f:SI 2 $2 [orig:235 ap.29 ] [235])
+            (const_int 4 [0x4]))) print.c:228# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [353])) print.c:228# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [354])
+        (mem:SI (reg/f:SI 2 $2 [orig:235 ap.29 ] [235]) [ MEM[(int *)ap.29_117]+0 S4 A32])) print.c:228# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:228# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [354])) print.c:228# {*movsi_internal}
+     (nil))
+(code_label 46 0 0 46 "" [1 uses])
+(note# 0 0 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:236 num.30 ] [236])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:237 D.1259 ] [237])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:230# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [355])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:230# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [356])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:230# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [356])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [357])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:230# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [357])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:237 D.1259 ] [237])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (const_int 0 [0])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [355])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:236 num.30 ] [236])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 10 [0xa])) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) print.c:230# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:230# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:230# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [358])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:231# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:231# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [358])) print.c:231# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:231# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:231# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:232# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 35 0 0 35 "" [1 uses])
+(note# 0 0 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [359])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:235# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:235# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [359])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:235# {*branch_equalitysi}
+     (nil)
+ -> 47)
+(note# 0 0 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:238 ap.31 ] [238])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:236# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:236# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [360])
+        (plus:SI (reg/f:SI 2 $2 [orig:238 ap.31 ] [238])
+            (const_int 4 [0x4]))) print.c:236# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [360])) print.c:236# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [361])
+        (mem:SI (reg/f:SI 2 $2 [orig:238 ap.31 ] [238]) [ MEM[(long int *)ap.31_123]+0 S4 A32])) print.c:236# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:236# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [361])) print.c:236# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 48)
+(barrier 0 0 0)
+(code_label 47 0 0 47 "" [1 uses])
+(note# 0 0 [bb 50] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:239 ap.32 ] [239])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:238# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:238# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [362])
+        (plus:SI (reg/f:SI 2 $2 [orig:239 ap.32 ] [239])
+            (const_int 4 [0x4]))) print.c:238# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [362])) print.c:238# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [363])
+        (mem:SI (reg/f:SI 2 $2 [orig:239 ap.32 ] [239]) [ MEM[(int *)ap.32_126]+0 S4 A32])) print.c:238# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:238# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [363])) print.c:238# {*movsi_internal}
+     (nil))
+(code_label 48 0 0 48 "" [1 uses])
+(note# 0 0 [bb 51] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:240 num.33 ] [240])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:241 D.1266 ] [241])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:240# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [364])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:240# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [365])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:240# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [365])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [366])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:240# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [366])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:241 D.1266 ] [241])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (const_int 0 [0])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [364])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:240 num.33 ] [240])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 16 [0x10])) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) print.c:240# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:240# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:240# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [367])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:241# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:241# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [367])) print.c:241# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:241# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:241# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:242# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 31 0 0 31 "" [1 uses])
+(note# 0 0 [bb 52] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [368])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ longFlag+0 S4 A32])) print.c:245# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:245# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [368])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:245# {*branch_equalitysi}
+     (nil)
+ -> 49)
+(note# 0 0 [bb 53] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:242 ap.34 ] [242])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:246# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:246# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [369])
+        (plus:SI (reg/f:SI 2 $2 [orig:242 ap.34 ] [242])
+            (const_int 4 [0x4]))) print.c:246# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [369])) print.c:246# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [370])
+        (mem:SI (reg/f:SI 2 $2 [orig:242 ap.34 ] [242]) [ MEM[(long int *)ap.34_132]+0 S4 A32])) print.c:246# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:246# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [370])) print.c:246# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 50)
+(barrier 0 0 0)
+(code_label 49 0 0 49 "" [1 uses])
+(note# 0 0 [bb 54] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:243 ap.35 ] [243])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:248# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:248# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [371])
+        (plus:SI (reg/f:SI 2 $2 [orig:243 ap.35 ] [243])
+            (const_int 4 [0x4]))) print.c:248# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [371])) print.c:248# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [372])
+        (mem:SI (reg/f:SI 2 $2 [orig:243 ap.35 ] [243]) [ MEM[(int *)ap.35_135]+0 S4 A32])) print.c:248# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:248# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])
+        (reg:SI 2 $2 [372])) print.c:248# {*movsi_internal}
+     (nil))
+(code_label 50 0 0 50 "" [1 uses])
+(note# 0 0 [bb 55] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:244 num.36 ] [244])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ num+0 S4 A32])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:245 D.1273 ] [245])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 56 [0x38])) [ padc+0 S1 A8]))) print.c:250# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [373])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:250# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [374])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:250# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg:SI 5 $5 [374])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5 [375])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:250# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 5 $5 [375])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg:SI 4 $4 [orig:245 D.1273 ] [245])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [376])
+        (const_int 1 [0x1])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 4 $4 [376])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [373])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:244 num.36 ] [244])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 16 [0x10])) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) print.c:250# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintNum") [flags 0x3] <function_decl # PrintNum>) [ PrintNum S4 A32])
+                    (const_int 32 [0x20])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:250# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                    (const_int 28 [0x1c])) [ S4 A32]))
+                        (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                        (const_int 24 [0x18])) [ S4 A32]))
+                            (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                            (const_int 20 [0x14])) [ S4 A32]))
+                                (expr_list:REG_LABEL_TARGET (use (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                                                (const_int 16 [0x10])) [ S4 A32]))
+                                    (nil))))))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:250# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [377])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:251# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:251# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [377])) print.c:251# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:251# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:251# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:252# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 33 0 0 33 "" [1 uses])
+(note# 0 0 [bb 56] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:246 ap.37 ] [246])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:255# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:255# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [378])
+        (plus:SI (reg/f:SI 2 $2 [orig:246 ap.37 ] [246])
+            (const_int 4 [0x4]))) print.c:255# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [378])) print.c:255# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:247 D.1275 ] [247])
+        (mem:SI (reg/f:SI 2 $2 [orig:246 ap.37 ] [246]) [ MEM[(int *)ap.37_141]+0 S4 A32])) print.c:255# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:255# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 68 [0x44])) [ c+0 S1 A8])
+        (reg:QI 2 $2 [orig:247 D.1275 ] [247])) print.c:255# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:248 D.1276 ] [248])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 68 [0x44])) [ c+0 S1 A8]))) print.c:256# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [379])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:256# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 3 $3 [379])) print.c:256# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:248 D.1276 ] [248])) print.c:256# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:256# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:256# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintChar") [flags 0x3] <function_decl # PrintChar>) [ PrintChar S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:256# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (nil))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:256# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [380])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:257# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:257# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [380])) print.c:257# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:257# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:257# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:258# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 34 0 0 34 "" [1 uses])
+(note# 0 0 [bb 57] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:249 ap.38 ] [249])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])) print.c:261# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:261# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [381])
+        (plus:SI (reg/f:SI 2 $2 [orig:249 ap.38 ] [249])
+            (const_int 4 [0x4]))) print.c:261# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 176 [0xb0])) [ ap+0 S4 A32])
+        (reg:SI 3 $3 [381])) print.c:261# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [382])
+        (mem/f:SI (reg/f:SI 2 $2 [orig:249 ap.38 ] [249]) [ MEM[(unsigned char * *)ap.38_147]+0 S4 A32])) print.c:261# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:261# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ s+0 S4 A32])
+        (reg/f:SI 2 $2 [382])) print.c:261# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [383])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:262# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 2 $2 [383])) print.c:262# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ s+0 S4 A32])) print.c:262# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 44 [0x2c])) [ width+0 S4 A32])) print.c:262# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 52 [0x34])) [ ladjust+0 S4 A32])) print.c:262# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("PrintString") [flags 0x3] <function_decl # PrintString>) [ PrintString S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:262# {call_value_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 7 $7))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+                (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                    (nil))))))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])
+        (reg:SI 2 $2)) print.c:262# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [384])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 76 [0x4c]))) print.c:263# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:263# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [384])) print.c:263# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ length+0 S4 A32])) print.c:263# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:263# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:264# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 27 0 0 27 "" [1 uses])
+(note# 0 0 [bb 58] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [386])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:267# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:267# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [385])
+        (plus:SI (reg:SI 2 $2 [386])
+            (const_int -1 [0xffffffffffffffff]))) print.c:267# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [385])) print.c:267# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:268# {*jump_absolute}
+     (nil)
+ -> 39)
+(barrier 0 0 0)
+(code_label 26 0 0 26 "" [110 uses])
+(note# 0 0 [bb 59] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:272# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:272# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 1 [0x1])) print.c:272# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:272# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(code_label 39 0 0 39 "" [9 uses])
+(note# 0 0 [bb 60] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [388])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])) print.c:275# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:275# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [387])
+        (plus:SI (reg:SI 2 $2 [388])
+            (const_int 1 [0x1]))) print.c:275# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 172 [0xac])) [ fmt+0 S4 A32])
+        (reg:SI 2 $2 [387])) print.c:275# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:276# {*jump_absolute}
+     (nil)
+ -> 51)
+(barrier 0 0 0)
+(code_label 53 0 0 53 "" [1 uses])
+(note# 0 0 [bb 62] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (const_int 0 [0]) print.c:137# {nop}
+     (nil))
+(code_label 52 0 0 52 "" [0 uses])
+(note# 0 0 [bb 61] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 168 [0xa8])) [ arg+0 S4 A32])) print.c:279# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [389])
+        (high:SI (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>))) print.c:279# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (lo_sum:SI (reg:SI 2 $2 [389])
+            (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>))) print.c:279# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>)
+        (nil)))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 1 [0x1])) print.c:279# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("myoutput") [flags 0x3] <function_decl # myoutput>) [ myoutput S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:279# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 6 $6))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+            (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+                (nil)))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:280#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:280# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 168 [0xa8]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 164 [0xa4])) [ S4 A32])) print.c:280# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 160 [0xa0])) [ S4 A32])) print.c:280# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:280#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 168 [0xa8]))) print.c:280# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (expr_list:REG_CFA_RESTORE (reg:SI 31 $31)
+                (nil)))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:280# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function PrintChar (PrintChar, funcdef_no=4, decl_uid=962, cgraph_uid=4)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -16 [0xfffffffffffffff0]))) print.c:286# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:286#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:286# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 12 [0xc])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:286# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ buf+0 S4 A32])
+        (reg:SI 4 $4 [ buf ])) print.c:286# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [204])
+        (reg:SI 5 $5 [ c ])) print.c:286# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])
+        (reg:SI 6 $6 [ length ])) print.c:286# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ ladjust+0 S4 A32])
+        (reg:SI 7 $7 [ ladjust ])) print.c:286# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ c+0 S1 A32])
+        (reg:QI 2 $2 [204])) print.c:286# {*movqi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [205])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])) print.c:289# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:289# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (gt (reg:SI 2 $2 [205])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:289# {*branch_ordersi}
+     (nil)
+ -> 55)
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [206])
+        (const_int 1 [0x1])) print.c:289# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])
+        (reg:SI 2 $2 [206])) print.c:289# {*movsi_internal}
+     (nil))
+(code_label 55 0 0 55 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [207])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ ladjust+0 S4 A32])) print.c:290# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:290# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [207])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:290# {*branch_equalitysi}
+     (nil)
+ -> 56)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [208])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ buf+0 S4 A32])) print.c:291# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [209])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ c+0 S1 A32])) print.c:291# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:291# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [208]) [ *buf_7(D)+0 S1 A8])
+        (reg:QI 3 $3 [209])) print.c:291# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [210])
+        (const_int 1 [0x1])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [210])) print.c:292# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:292# {*jump_absolute}
+     (nil)
+ -> 57)
+(barrier 0 0 0)
+(code_label 58 0 0 58 "" [1 uses])
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 i.14 ] [194])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [211])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ buf+0 S4 A32])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:292# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:195 D.1170 ] [195])
+        (plus:SI (reg:SI 3 $3 [211])
+            (reg:SI 2 $2 [orig:194 i.14 ] [194]))) print.c:292# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [212])
+        (const_int 32 [0x20])) print.c:292# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:195 D.1170 ] [195]) [ *D.1170_11+0 S1 A8])
+        (reg:QI 3 $3 [212])) print.c:292# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [214])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:292# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [213])
+        (plus:SI (reg:SI 2 $2 [214])
+            (const_int 1 [0x1]))) print.c:292# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [213])) print.c:292# {*movsi_internal}
+     (nil))
+(code_label 57 0 0 57 "" [1 uses])
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [215])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [216])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])) print.c:292# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:292# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [217])
+        (lt:SI (reg:SI 3 $3 [215])
+            (reg:SI 2 $2 [216]))) print.c:292# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [217])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:292# {*branch_equalitysi}
+     (nil)
+ -> 58)
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:292# {*jump_absolute}
+     (nil)
+ -> 59)
+(barrier 0 0 0)
+(code_label 56 0 0 56 "" [1 uses])
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (const_int 0 [0])) print.c:294# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:294# {*jump_absolute}
+     (nil)
+ -> 60)
+(barrier 0 0 0)
+(code_label 61 0 0 61 "" [1 uses])
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:197 i.15 ] [197])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:294# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [218])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ buf+0 S4 A32])) print.c:294# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:294# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:198 D.1173 ] [198])
+        (plus:SI (reg:SI 3 $3 [218])
+            (reg:SI 2 $2 [orig:197 i.15 ] [197]))) print.c:294# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [219])
+        (const_int 32 [0x20])) print.c:294# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:198 D.1173 ] [198]) [ *D.1173_16+0 S1 A8])
+        (reg:QI 3 $3 [219])) print.c:294# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [221])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:294# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:294# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [220])
+        (plus:SI (reg:SI 2 $2 [221])
+            (const_int 1 [0x1]))) print.c:294# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [220])) print.c:294# {*movsi_internal}
+     (nil))
+(code_label 60 0 0 60 "" [1 uses])
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])) print.c:294# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:294# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 D.1174 ] [196])
+        (plus:SI (reg:SI 2 $2 [222])
+            (const_int -1 [0xffffffffffffffff]))) print.c:294# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [223])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:294# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:294# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [224])
+        (gt:SI (reg:SI 3 $3 [orig:196 D.1174 ] [196])
+            (reg:SI 2 $2 [223]))) print.c:294# {*sgt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [224])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:294# {*branch_equalitysi}
+     (nil)
+ -> 61)
+(note# 0 0 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:199 length.16 ] [199])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])) print.c:295# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:295# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:200 D.1176 ] [200])
+        (plus:SI (reg:SI 2 $2 [orig:199 length.16 ] [199])
+            (const_int -1 [0xffffffffffffffff]))) print.c:295# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [225])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ buf+0 S4 A32])) print.c:295# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:295# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:201 D.1177 ] [201])
+        (plus:SI (reg:SI 3 $3 [225])
+            (reg:SI 2 $2 [orig:200 D.1176 ] [200]))) print.c:295# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [226])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ c+0 S1 A32])) print.c:295# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:295# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:201 D.1177 ] [201]) [ *D.1177_20+0 S1 A8])
+        (reg:QI 3 $3 [226])) print.c:295# {*movqi_internal}
+     (nil))
+(code_label 59 0 0 59 "" [1 uses])
+(note# 0 0 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:202 D.1178 ] [202])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ length+0 S4 A32])) print.c:297# {*movsi_internal}
+     (nil))
+(insn# 0 0 (use (reg/i:SI 2 $2)) print.c:298#
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:298#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:298# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 16 [0x10]))
+        (nil)))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])) print.c:298# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:298#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 16 [0x10]))) print.c:298# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (nil))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:298# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function PrintString (PrintString, funcdef_no=5, decl_uid=967, cgraph_uid=5)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -24 [0xffffffffffffffe8]))) print.c:302# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:302#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:302# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 20 [0x14])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:302# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])
+        (reg:SI 4 $4 [ buf ])) print.c:302# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ s+0 S4 A32])
+        (reg:SI 5 $5 [ s ])) print.c:302# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])
+        (reg:SI 6 $6 [ length ])) print.c:302# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ ladjust+0 S4 A32])
+        (reg:SI 7 $7 [ ladjust ])) print.c:302# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])
+        (const_int 0 [0])) print.c:304# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [215])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ s+0 S4 A32])) print.c:305# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:305# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ s1+0 S4 A32])
+        (reg/f:SI 2 $2 [215])) print.c:305# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:306# {*jump_absolute}
+     (nil)
+ -> 64)
+(barrier 0 0 0)
+(code_label 65 0 0 65 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [217])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:306# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:306# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [216])
+        (plus:SI (reg:SI 2 $2 [217])
+            (const_int 1 [0x1]))) print.c:306# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])
+        (reg:SI 2 $2 [216])) print.c:306# {*movsi_internal}
+     (nil))
+(code_label 64 0 0 64 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [218])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ s1+0 S4 A32])) print.c:306# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:306# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1139 ] [194])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [218]) [ *s1_7+0 S1 A8]))) print.c:306# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:306# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [220])
+        (ne:SI (reg:SI 2 $2 [orig:194 D.1139 ] [194])
+            (const_int 0 [0]))) print.c:306# {*sne_zero_sisi}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 D.1140 ] [195])
+        (zero_extend:SI (reg:QI 2 $2 [219]))) print.c:306# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [222])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ s1+0 S4 A32])) print.c:306# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:306# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [221])
+        (plus:SI (reg:SI 3 $3 [222])
+            (const_int 1 [0x1]))) print.c:306# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ s1+0 S4 A32])
+        (reg:SI 3 $3 [221])) print.c:306# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [orig:195 D.1140 ] [195])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:306# {*branch_equalitysi}
+     (nil)
+ -> 65)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [223])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:307# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [224])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:307# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:307# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [225])
+        (lt:SI (reg:SI 3 $3 [223])
+            (reg:SI 2 $2 [224]))) print.c:307# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [225])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:307# {*branch_equalitysi}
+     (nil)
+ -> 66)
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [226])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:307# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:307# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])
+        (reg:SI 2 $2 [226])) print.c:307# {*movsi_internal}
+     (nil))
+(code_label 66 0 0 66 "" [1 uses])
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [227])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ ladjust+0 S4 A32])) print.c:309# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:309# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [227])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:309# {*branch_equalitysi}
+     (nil)
+ -> 67)
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (const_int 0 [0])) print.c:310# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:310# {*jump_absolute}
+     (nil)
+ -> 68)
+(barrier 0 0 0)
+(code_label 69 0 0 69 "" [1 uses])
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:196 i.9 ] [196])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [228])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:310# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:197 D.1146 ] [197])
+        (plus:SI (reg:SI 3 $3 [228])
+            (reg:SI 2 $2 [orig:196 i.9 ] [196]))) print.c:310# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:198 i.10 ] [198])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [229])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ s+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:310# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 3 $3 [orig:199 D.1148 ] [199])
+        (plus:SI (reg:SI 4 $4 [229])
+            (reg:SI 3 $3 [orig:198 i.10 ] [198]))) print.c:310# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:200 D.1149 ] [200])
+        (zero_extend:SI (mem:QI (reg/f:SI 3 $3 [orig:199 D.1148 ] [199]) [ *D.1148_23+0 S1 A8]))) print.c:310# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:310# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:197 D.1146 ] [197]) [ *D.1146_21+0 S1 A8])
+        (reg:QI 3 $3 [orig:200 D.1149 ] [200])) print.c:310# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [231])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:310# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [230])
+        (plus:SI (reg:SI 2 $2 [231])
+            (const_int 1 [0x1]))) print.c:310# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [230])) print.c:310# {*movsi_internal}
+     (nil))
+(code_label 68 0 0 68 "" [1 uses])
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [232])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [233])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:310# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:310# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [234])
+        (lt:SI (reg:SI 3 $3 [232])
+            (reg:SI 2 $2 [233]))) print.c:310# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [234])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:310# {*branch_equalitysi}
+     (nil)
+ -> 69)
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [235])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:311# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [235])) print.c:311# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:311# {*jump_absolute}
+     (nil)
+ -> 70)
+(barrier 0 0 0)
+(code_label 71 0 0 71 "" [1 uses])
+(note# 0 0 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:201 i.11 ] [201])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [236])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:311# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:202 D.1151 ] [202])
+        (plus:SI (reg:SI 3 $3 [236])
+            (reg:SI 2 $2 [orig:201 i.11 ] [201]))) print.c:311# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [237])
+        (const_int 32 [0x20])) print.c:311# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:202 D.1151 ] [202]) [ *D.1151_28+0 S1 A8])
+        (reg:QI 3 $3 [237])) print.c:311# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [239])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:311# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [238])
+        (plus:SI (reg:SI 2 $2 [239])
+            (const_int 1 [0x1]))) print.c:311# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [238])) print.c:311# {*movsi_internal}
+     (nil))
+(code_label 70 0 0 70 "" [1 uses])
+(note# 0 0 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [240])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [241])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:311# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:311# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [242])
+        (lt:SI (reg:SI 3 $3 [240])
+            (reg:SI 2 $2 [241]))) print.c:311# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [242])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:311# {*branch_equalitysi}
+     (nil)
+ -> 71)
+(note# 0 0 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:311# {*jump_absolute}
+     (nil)
+ -> 72)
+(barrier 0 0 0)
+(code_label 67 0 0 67 "" [1 uses])
+(note# 0 0 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (const_int 0 [0])) print.c:313# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:313# {*jump_absolute}
+     (nil)
+ -> 73)
+(barrier 0 0 0)
+(code_label 74 0 0 74 "" [1 uses])
+(note# 0 0 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:204 i.12 ] [204])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [243])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:313# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:205 D.1154 ] [205])
+        (plus:SI (reg:SI 3 $3 [243])
+            (reg:SI 2 $2 [orig:204 i.12 ] [204]))) print.c:313# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [244])
+        (const_int 32 [0x20])) print.c:313# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:205 D.1154 ] [205]) [ *D.1154_33+0 S1 A8])
+        (reg:QI 3 $3 [244])) print.c:313# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [246])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:313# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [245])
+        (plus:SI (reg:SI 2 $2 [246])
+            (const_int 1 [0x1]))) print.c:313# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [245])) print.c:313# {*movsi_internal}
+     (nil))
+(code_label 73 0 0 73 "" [1 uses])
+(note# 0 0 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [247])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [248])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:313# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:203 D.1155 ] [203])
+        (minus:SI (reg:SI 3 $3 [247])
+            (reg:SI 2 $2 [248]))) print.c:313# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:313# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:313# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [250])
+        (gt:SI (reg:SI 3 $3 [orig:203 D.1155 ] [203])
+            (reg:SI 2 $2 [249]))) print.c:313# {*sgt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [250])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:313# {*branch_equalitysi}
+     (nil)
+ -> 74)
+(note# 0 0 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [252])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [253])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [251])
+        (minus:SI (reg:SI 3 $3 [252])
+            (reg:SI 2 $2 [253]))) print.c:314# {subsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [251])) print.c:314# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:314# {*jump_absolute}
+     (nil)
+ -> 75)
+(barrier 0 0 0)
+(code_label 76 0 0 76 "" [1 uses])
+(note# 0 0 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:206 i.13 ] [206])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [254])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:207 D.1157 ] [207])
+        (plus:SI (reg:SI 3 $3 [254])
+            (reg:SI 2 $2 [orig:206 i.13 ] [206]))) print.c:314# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [255])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [256])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [orig:208 D.1158 ] [208])
+        (minus:SI (reg:SI 4 $4 [255])
+            (reg:SI 3 $3 [256]))) print.c:314# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [257])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ len+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:209 D.1159 ] [209])
+        (plus:SI (reg:SI 4 $4 [orig:208 D.1158 ] [208])
+            (reg:SI 3 $3 [257]))) print.c:314# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [258])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ s+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 3 $3 [orig:211 D.1161 ] [211])
+        (plus:SI (reg:SI 4 $4 [258])
+            (reg:SI 3 $3 [orig:210 D.1160 ] [210]))) print.c:314# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:212 D.1162 ] [212])
+        (zero_extend:SI (mem:QI (reg/f:SI 3 $3 [orig:211 D.1161 ] [211]) [ *D.1161_41+0 S1 A8]))) print.c:314# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:207 D.1157 ] [207]) [ *D.1157_37+0 S1 A8])
+        (reg:QI 3 $3 [orig:212 D.1162 ] [212])) print.c:314# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [260])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [259])
+        (plus:SI (reg:SI 2 $2 [260])
+            (const_int 1 [0x1]))) print.c:314# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [259])) print.c:314# {*movsi_internal}
+     (nil))
+(code_label 75 0 0 75 "" [1 uses])
+(note# 0 0 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [261])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [262])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:314# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:314# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [263])
+        (lt:SI (reg:SI 3 $3 [261])
+            (reg:SI 2 $2 [262]))) print.c:314# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [263])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:314# {*branch_equalitysi}
+     (nil)
+ -> 76)
+(code_label 72 0 0 72 "" [1 uses])
+(note# 0 0 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:213 D.1163 ] [213])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ length+0 S4 A32])) print.c:316# {*movsi_internal}
+     (nil))
+(insn# 0 0 (use (reg/i:SI 2 $2)) print.c:317#
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:317#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:317# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))
+        (nil)))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])) print.c:317# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:317#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))) print.c:317# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (nil))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:317# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function print_num_buf (print_num_buf, funcdef_no=6, decl_uid=1059, cgraph_uid=6)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -24 [0xffffffffffffffe8]))) print.c:321# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:321#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:321# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 20 [0x14])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:321# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])
+        (reg:SI 4 $4 [ buf ])) print.c:321# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ n+0 S4 A32])
+        (reg:SI 5 $5 [ n ])) print.c:321# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg/f:SI 2 $2 [198])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ n+0 S4 A32])) print.c:326# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:326# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ ch+0 S4 A32])
+        (reg/f:SI 2 $2 [198])) print.c:326# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (const_int 0 [0])) print.c:328# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:328# {*jump_absolute}
+     (nil)
+ -> 79)
+(barrier 0 0 0)
+(code_label 84 0 0 84 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [199])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ ch+0 S4 A32])) print.c:330# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:330# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:QI 2 $2 [200])
+        (mem:QI (reg/f:SI 2 $2 [199]) [ *ch_3+0 S1 A8])) print.c:330# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:330# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ c+0 S1 A8])
+        (reg:QI 2 $2 [200])) print.c:330# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [202])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ ch+0 S4 A32])) print.c:330# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:330# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [201])
+        (plus:SI (reg:SI 2 $2 [202])
+            (const_int 1 [0x1]))) print.c:330# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 4 [0x4])) [ ch+0 S4 A32])
+        (reg:SI 2 $2 [201])) print.c:330# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:QI 2 $2 [203])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ c+0 S1 A8])) print.c:331# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:331# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [204])
+        (and:SI (reg:SI 2 $2 [203])
+            (const_int 15 [0xf]))) print.c:331# {*andsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 9 [0x9])) [ c_l+0 S1 A8])
+        (reg:QI 2 $2 [204])) print.c:331# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [205])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ c+0 S1 A8])) print.c:332# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [207])
+        (const_int -16 [0xfffffffffffffff0])) print.c:332# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [206])
+        (and:SI (reg:SI 3 $3 [205])
+            (reg:SI 2 $2 [207]))) print.c:332# {*andsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 10 [0xa])) [ c_h+0 S1 A8])
+        (reg:QI 2 $2 [206])) print.c:332# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [208])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 10 [0xa])) [ c_h+0 S1 A8]))) print.c:333# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:333# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [209])
+        (lshiftrt:SI (reg:SI 2 $2 [208])
+            (const_int 4 [0x4]))) print.c:333# {*lshrsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 10 [0xa])) [ c_h+0 S1 A8])
+        (reg:QI 2 $2 [209])) print.c:333# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [210])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 10 [0xa])) [ c_h+0 S1 A8]))) print.c:334# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:334# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [211])
+        (leu:SI (reg:SI 2 $2 [210])
+            (const_int 8 [0x8]))) print.c:334# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [211])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:334# {*branch_equalitysi}
+     (nil)
+ -> 80)
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [212])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 10 [0xa])) [ c_h+0 S1 A8])) print.c:334# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:334# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [213])
+        (plus:SI (reg:SI 2 $2 [212])
+            (const_int 48 [0x30]))) print.c:334# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:194 D.1131 ] [194])
+        (zero_extend:SI (reg:QI 2 $2 [213]))) print.c:334# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [214])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:334# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:334# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [214]) [ *buf_1+0 S1 A8])
+        (reg:QI 3 $3 [orig:194 D.1131 ] [194])) print.c:334# {*movqi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 81)
+(barrier 0 0 0)
+(code_label 80 0 0 80 "" [1 uses])
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [215])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 10 [0xa])) [ c_h+0 S1 A8])) print.c:335# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:335# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [216])
+        (plus:SI (reg:SI 2 $2 [215])
+            (const_int 55 [0x37]))) print.c:335# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:195 D.1133 ] [195])
+        (zero_extend:SI (reg:QI 2 $2 [216]))) print.c:335# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [217])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:335# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:335# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [217]) [ *buf_1+0 S1 A8])
+        (reg:QI 3 $3 [orig:195 D.1133 ] [195])) print.c:335# {*movqi_internal}
+     (nil))
+(code_label 81 0 0 81 "" [1 uses])
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [218])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 9 [0x9])) [ c_l+0 S1 A8]))) print.c:337# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:337# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [219])
+        (leu:SI (reg:SI 2 $2 [218])
+            (const_int 8 [0x8]))) print.c:337# {*sleu_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [219])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:337# {*branch_equalitysi}
+     (nil)
+ -> 82)
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [220])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 9 [0x9])) [ c_l+0 S1 A8])) print.c:337# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:337# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [221])
+        (plus:SI (reg:SI 2 $2 [220])
+            (const_int 48 [0x30]))) print.c:337# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 D.1136 ] [196])
+        (zero_extend:SI (reg:QI 2 $2 [221]))) print.c:337# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [222])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:337# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:337# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [222]) [ *buf_1+0 S1 A8])
+        (reg:QI 3 $3 [orig:196 D.1136 ] [196])) print.c:337# {*movqi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 83)
+(barrier 0 0 0)
+(code_label 82 0 0 82 "" [1 uses])
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [223])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 9 [0x9])) [ c_l+0 S1 A8])) print.c:338# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:338# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [224])
+        (plus:SI (reg:SI 2 $2 [223])
+            (const_int 55 [0x37]))) print.c:338# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:197 D.1138 ] [197])
+        (zero_extend:SI (reg:QI 2 $2 [224]))) print.c:338# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [225])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:338# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:338# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [225]) [ *buf_1+0 S1 A8])
+        (reg:QI 3 $3 [orig:197 D.1138 ] [197])) print.c:338# {*movqi_internal}
+     (nil))
+(code_label 83 0 0 83 "" [1 uses])
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [227])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])) print.c:340# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:340# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [226])
+        (plus:SI (reg:SI 2 $2 [227])
+            (const_int 1 [0x1]))) print.c:340# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ buf+0 S4 A32])
+        (reg:SI 2 $2 [226])) print.c:340# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [229])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:328# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:328# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [228])
+        (plus:SI (reg:SI 2 $2 [229])
+            (const_int 1 [0x1]))) print.c:328# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])
+        (reg:SI 2 $2 [228])) print.c:328# {*movsi_internal}
+     (nil))
+(code_label 79 0 0 79 "" [1 uses])
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [230])
+        (mem/c:SI (reg/f:SI 30 $fp) [ i+0 S4 A32])) print.c:328# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:328# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [231])
+        (le:SI (reg:SI 2 $2 [230])
+            (const_int 3 [0x3]))) print.c:328# {*sle_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [231])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:328# {*branch_equalitysi}
+     (nil)
+ -> 84)
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:343#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:343# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))
+        (nil)))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])) print.c:343# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:343#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))) print.c:343# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (nil))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:343# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function PrintNum (PrintNum, funcdef_no=7, decl_uid=976, cgraph_uid=7)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -56 [0xffffffffffffffc8]))) print.c:351# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:351#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 52 [0x34])) [ S4 A32])
+        (reg:SI 31 $31)) print.c:351# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 52 [0x34])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 48 [0x30])) [ S4 A32])
+        (reg/f:SI 30 $fp)) print.c:351# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 48 [0x30])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) print.c:351# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])
+        (reg:SI 4 $4 [ buf ])) print.c:351# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 60 [0x3c])) [ u+0 S4 A32])
+        (reg:SI 5 $5 [ u ])) print.c:351# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 64 [0x40])) [ base+0 S4 A32])
+        (reg:SI 6 $6 [ base ])) print.c:351# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 68 [0x44])) [ negFlag+0 S4 A32])
+        (reg:SI 7 $7 [ negFlag ])) print.c:351# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [215])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 80 [0x50])) [ padc+0 S4 A32])) print.c:351# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:351# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ padc+0 S1 A8])
+        (reg:QI 2 $2 [215])) print.c:351# {*movqi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])
+        (const_int 0 [0])) print.c:362# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [216])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:363# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:363# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])
+        (reg/f:SI 2 $2 [216])) print.c:363# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [217])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 60 [0x3c]))) print.c:385# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])) print.c:385# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [217])) print.c:385# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("print_num_buf") [flags 0x3] <function_decl # print_num_buf>) [ print_num_buf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) print.c:385# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 5 $5))
+        (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+            (nil))))
+(insn# 0 0 (set (reg:SI 2 $2 [218])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 68 [0x44])) [ negFlag+0 S4 A32])) print.c:389# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:389# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [218])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:389# {*branch_equalitysi}
+     (nil)
+ -> 86)
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [219])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])) print.c:390# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [220])
+        (const_int 45 [0x2d])) print.c:390# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [219]) [ *p_11+0 S1 A8])
+        (reg:QI 3 $3 [220])) print.c:390# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])) print.c:390# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:390# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [221])
+        (plus:SI (reg:SI 2 $2 [222])
+            (const_int 1 [0x1]))) print.c:390# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])
+        (reg:SI 2 $2 [221])) print.c:390# {*movsi_internal}
+     (nil))
+(code_label 86 0 0 86 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [orig:194 p.0 ] [194])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ p+0 S4 A32])) print.c:394# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 buf.1 ] [195])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:394# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:394# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [223])
+        (minus:SI (reg:SI 3 $3 [orig:194 p.0 ] [194])
+            (reg:SI 2 $2 [orig:195 buf.1 ] [195]))) print.c:394# {subsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])
+        (reg:SI 2 $2 [223])) print.c:394# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [224])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:395# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [225])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])) print.c:395# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:395# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [226])
+        (lt:SI (reg:SI 3 $3 [224])
+            (reg:SI 2 $2 [225]))) print.c:395# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [226])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:395# {*branch_equalitysi}
+     (nil)
+ -> 87)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [227])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])) print.c:395# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:395# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])
+        (reg:SI 2 $2 [227])) print.c:395# {*movsi_internal}
+     (nil))
+(code_label 87 0 0 87 "" [1 uses])
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [228])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 76 [0x4c])) [ ladjust+0 S4 A32])) print.c:398# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:398# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [228])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:398# {*branch_equalitysi}
+     (nil)
+ -> 88)
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:QI 2 $2 [229])
+        (const_int 32 [0x20])) print.c:399# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ padc+0 S1 A8])
+        (reg:QI 2 $2 [229])) print.c:399# {*movqi_internal}
+     (nil))
+(code_label 88 0 0 88 "" [1 uses])
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [230])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 68 [0x44])) [ negFlag+0 S4 A32])) print.c:401# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:401# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [230])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:401# {*branch_equalitysi}
+     (nil)
+ -> 89)
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [231])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 76 [0x4c])) [ ladjust+0 S4 A32])) print.c:401# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:401# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [231])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:401# {*branch_equalitysi}
+     (nil)
+ -> 89)
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [232])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 40 [0x28])) [ padc+0 S1 A8]))) print.c:401# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [233])
+        (const_int 48 [0x30])) print.c:401# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [232])
+                (reg:SI 2 $2 [233]))
+            (label_ref #)
+            (pc))) print.c:401# {*branch_equalitysi}
+     (nil)
+ -> 89)
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [235])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [234])
+        (plus:SI (reg:SI 2 $2 [235])
+            (const_int -1 [0xffffffffffffffff]))) print.c:402# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [234])) print.c:402# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:402# {*jump_absolute}
+     (nil)
+ -> 90)
+(barrier 0 0 0)
+(code_label 91 0 0 91 "" [1 uses])
+(note# 0 0 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:197 i.2 ] [197])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [236])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:198 D.1108 ] [198])
+        (plus:SI (reg:SI 3 $3 [236])
+            (reg:SI 2 $2 [orig:197 i.2 ] [197]))) print.c:402# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [237])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ padc+0 S1 A8])) print.c:402# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:198 D.1108 ] [198]) [ *D.1108_25+0 S1 A8])
+        (reg:QI 3 $3 [237])) print.c:402# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [239])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [238])
+        (plus:SI (reg:SI 2 $2 [239])
+            (const_int 1 [0x1]))) print.c:402# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [238])) print.c:402# {*movsi_internal}
+     (nil))
+(code_label 90 0 0 90 "" [1 uses])
+(note# 0 0 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [240])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 D.1109 ] [196])
+        (plus:SI (reg:SI 2 $2 [240])
+            (const_int -1 [0xffffffffffffffff]))) print.c:402# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [241])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:402# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:402# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [242])
+        (gt:SI (reg:SI 3 $3 [orig:196 D.1109 ] [196])
+            (reg:SI 2 $2 [241]))) print.c:402# {*sgt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [242])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:402# {*branch_equalitysi}
+     (nil)
+ -> 91)
+(note# 0 0 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:199 length.3 ] [199])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:403# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:403# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:200 D.1111 ] [200])
+        (plus:SI (reg:SI 2 $2 [orig:199 length.3 ] [199])
+            (const_int -1 [0xffffffffffffffff]))) print.c:403# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [243])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:403# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:403# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:201 D.1112 ] [201])
+        (plus:SI (reg:SI 3 $3 [243])
+            (reg:SI 2 $2 [orig:200 D.1111 ] [200]))) print.c:403# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [244])
+        (const_int 45 [0x2d])) print.c:403# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:201 D.1112 ] [201]) [ *D.1112_29+0 S1 A8])
+        (reg:QI 3 $3 [244])) print.c:403# {*movqi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:403# {*jump_absolute}
+     (nil)
+ -> 92)
+(barrier 0 0 0)
+(code_label 89 0 0 89 "" [3 uses])
+(note# 0 0 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [245])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:405# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [245])) print.c:405# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:405# {*jump_absolute}
+     (nil)
+ -> 93)
+(barrier 0 0 0)
+(code_label 94 0 0 94 "" [1 uses])
+(note# 0 0 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:202 i.4 ] [202])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [246])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:405# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:203 D.1114 ] [203])
+        (plus:SI (reg:SI 3 $3 [246])
+            (reg:SI 2 $2 [orig:202 i.4 ] [202]))) print.c:405# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [247])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 40 [0x28])) [ padc+0 S1 A8])) print.c:405# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:405# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:203 D.1114 ] [203]) [ *D.1114_32+0 S1 A8])
+        (reg:QI 3 $3 [247])) print.c:405# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:405# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [248])
+        (plus:SI (reg:SI 2 $2 [249])
+            (const_int 1 [0x1]))) print.c:405# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [248])) print.c:405# {*movsi_internal}
+     (nil))
+(code_label 93 0 0 93 "" [1 uses])
+(note# 0 0 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [250])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ i+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [251])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:405# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:405# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [252])
+        (lt:SI (reg:SI 3 $3 [250])
+            (reg:SI 2 $2 [251]))) print.c:405# {*slt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [252])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:405# {*branch_equalitysi}
+     (nil)
+ -> 94)
+(code_label 92 0 0 92 "" [1 uses])
+(note# 0 0 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])
+        (const_int 0 [0])) print.c:411# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [253])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 76 [0x4c])) [ ladjust+0 S4 A32])) print.c:413# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:413# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [253])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:413# {*branch_equalitysi}
+     (nil)
+ -> 95)
+(note# 0 0 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [255])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ actualLength+0 S4 A32])) print.c:414# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:414# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [254])
+        (plus:SI (reg:SI 2 $2 [255])
+            (const_int -1 [0xffffffffffffffff]))) print.c:414# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])
+        (reg:SI 2 $2 [254])) print.c:414# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:419# {*jump_absolute}
+     (nil)
+ -> 97)
+(barrier 0 0 0)
+(code_label 95 0 0 95 "" [1 uses])
+(note# 0 0 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [257])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:416# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:416# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [256])
+        (plus:SI (reg:SI 2 $2 [257])
+            (const_int -1 [0xffffffffffffffff]))) print.c:416# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])
+        (reg:SI 2 $2 [256])) print.c:416# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) print.c:419# {*jump_absolute}
+     (nil)
+ -> 97)
+(barrier 0 0 0)
+(code_label 98 0 0 98 "" [1 uses])
+(note# 0 0 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:204 begin.5 ] [204])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])) print.c:420# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [258])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:420# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:420# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:205 D.1119 ] [205])
+        (plus:SI (reg:SI 3 $3 [258])
+            (reg:SI 2 $2 [orig:204 begin.5 ] [204]))) print.c:420# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 2 $2 [259])
+        (mem:QI (reg/f:SI 2 $2 [orig:205 D.1119 ] [205]) [ *D.1119_38+0 S1 A8])) print.c:420# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:420# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ tmp+0 S1 A8])
+        (reg:QI 2 $2 [259])) print.c:420# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:206 begin.6 ] [206])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])) print.c:421# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [260])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:421# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:421# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:207 D.1121 ] [207])
+        (plus:SI (reg:SI 3 $3 [260])
+            (reg:SI 2 $2 [orig:206 begin.6 ] [206]))) print.c:421# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:208 end.7 ] [208])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])) print.c:421# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4 [261])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:421# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:421# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 3 $3 [orig:209 D.1123 ] [209])
+        (plus:SI (reg:SI 4 $4 [261])
+            (reg:SI 3 $3 [orig:208 end.7 ] [208]))) print.c:421# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:210 D.1124 ] [210])
+        (zero_extend:SI (mem:QI (reg/f:SI 3 $3 [orig:209 D.1123 ] [209]) [ *D.1123_43+0 S1 A8]))) print.c:421# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:421# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:207 D.1121 ] [207]) [ *D.1121_41+0 S1 A8])
+        (reg:QI 3 $3 [orig:210 D.1124 ] [210])) print.c:421# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:211 end.8 ] [211])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])) print.c:422# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [262])
+        (mem/f/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 56 [0x38])) [ buf+0 S4 A32])) print.c:422# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:422# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:212 D.1126 ] [212])
+        (plus:SI (reg:SI 3 $3 [262])
+            (reg:SI 2 $2 [orig:211 end.8 ] [211]))) print.c:422# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:QI 3 $3 [263])
+        (mem/c:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 36 [0x24])) [ tmp+0 S1 A8])) print.c:422# {*movqi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:422# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem:QI (reg/f:SI 2 $2 [orig:212 D.1126 ] [212]) [ *D.1126_46+0 S1 A8])
+        (reg:QI 3 $3 [263])) print.c:422# {*movqi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [265])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])) print.c:423# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:423# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [264])
+        (plus:SI (reg:SI 2 $2 [265])
+            (const_int 1 [0x1]))) print.c:423# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])
+        (reg:SI 2 $2 [264])) print.c:423# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [267])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])) print.c:424# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:424# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [266])
+        (plus:SI (reg:SI 2 $2 [267])
+            (const_int -1 [0xffffffffffffffff]))) print.c:424# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])
+        (reg:SI 2 $2 [266])) print.c:424# {*movsi_internal}
+     (nil))
+(code_label 97 0 0 97 "" [2 uses])
+(note# 0 0 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [268])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 28 [0x1c])) [ end+0 S4 A32])) print.c:419# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [269])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ begin+0 S4 A32])) print.c:419# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) print.c:419# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [270])
+        (gt:SI (reg:SI 3 $3 [268])
+            (reg:SI 2 $2 [269]))) print.c:419# {*sgt_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [270])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) print.c:419# {*branch_equalitysi}
+     (nil)
+ -> 98)
+(note# 0 0 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:213 D.1127 ] [213])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 72 [0x48])) [ length+0 S4 A32])) print.c:433# {*movsi_internal}
+     (nil))
+(insn# 0 0 (use (reg/i:SI 2 $2)) print.c:434#
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:434#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) print.c:434# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 56 [0x38]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 52 [0x34])) [ S4 A32])) print.c:434# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 48 [0x30])) [ S4 A32])) print.c:434# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) print.c:434#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 56 [0x38]))) print.c:434# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (expr_list:REG_CFA_RESTORE (reg:SI 31 $31)
+                (nil)))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) print.c:434# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)

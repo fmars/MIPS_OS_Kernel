@@ -1,0 +1,35 @@
+console.o: console.c include/dev_cons.h include/arch_cocoa.h
+env.o: env.c include/mm.h include/types.h include/env.h include/mm.h \
+ include/queue.h include/pmap.h include/printf.h include/lib.h
+env_asm.o: env_asm.S include/regdef.h include/asm.h include/regdef.h \
+ include/cp0regdef.h include/env.h include/stackframe.h include/asm.h \
+ include/env.h
+genex.o: genex.S include/regdef.h include/cp0regdef.h include/asm.h \
+ include/regdef.h include/cp0regdef.h include/stackframe.h include/asm.h \
+ include/env.h
+init.o: init.c include/printf.h include/mm.h include/types.h user/A.char \
+ user/B.char user/C.char include/env.h include/mm.h include/queue.h \
+ include/arch_cocoa.h
+pmap.o: pmap.c include/mm.h include/types.h include/pmap.h
+print.o: print.c include/printf.h include/print.h include/dev_cons.h
+printf.o: printf.c
+sched.o: sched.c include/env.h include/mm.h include/types.h \
+ include/queue.h include/printf.h
+syscall.o: syscall.S include/regdef.h include/cp0regdef.h include/asm.h \
+ include/regdef.h include/cp0regdef.h include/stackframe.h include/asm.h \
+ include/env.h include/unistd.h
+syscall_all.o: syscall_all.c include/dev_cons.h include/env.h \
+ include/mm.h include/types.h include/queue.h include/print.h \
+ include/printf.h include/lib.h
+syscall_wrap.o: syscall_wrap.S include/asm.h include/regdef.h \
+ include/cp0regdef.h include/regdef.h include/cp0regdef.h
+syscall_lib.o: syscall_lib.c include/dev_cons.h include/env.h \
+ include/mm.h include/types.h include/queue.h include/print.h \
+ include/printf.h include/lib.h
+traps.o: traps.c include/env.h include/mm.h include/types.h \
+ include/queue.h include/printf.h
+interupt.o: interupt.S include/asm.h include/regdef.h include/cp0regdef.h \
+ include/regdef.h include/cp0regdef.h include/stackframe.h include/asm.h \
+ include/env.h
+start.o: start.S include/asm.h include/regdef.h include/cp0regdef.h \
+ include/regdef.h include/cp0regdef.h

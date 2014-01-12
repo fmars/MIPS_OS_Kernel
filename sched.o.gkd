@@ -1,0 +1,533 @@
+
+;; Function sched_yield (sched_yield, funcdef_no=0, decl_uid=994, cgraph_uid=0)
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -40 [0xffffffffffffffd8]))) sched.c:15# {*addsi3}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) sched.c:15#
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 36 [0x24])) [ S4 A32])
+        (reg:SI 31 $31)) sched.c:15# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 36 [0x24])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 32 [0x20])) [ S4 A32])
+        (reg/f:SI 30 $fp)) sched.c:15# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 32 [0x20])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) sched.c:15# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])
+        (const_int 0 [0])) sched.c:21# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) sched.c:21# {*jump_absolute}
+     (nil)
+ -> 2)
+(barrier 0 0 0)
+(code_label 7 0 0 7 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [208])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 Next_EnvNum.0 ] [194])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [208])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [209])
+        (high:SI (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 4 $4 [210])
+        (lo_sum:SI (reg:SI 3 $3 [209])
+            (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:23# {*lowsi}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [212])
+        (reg:SI 2 $2 [orig:194 Next_EnvNum.0 ] [194])) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [213])
+        (ashift:SI (reg:SI 3 $3 [212])
+            (const_int 3 [0x3]))) sched.c:23# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [212])
+        (reg:SI 2 $2 [213])) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [214])
+        (ashift:SI (reg:SI 3 $3 [212])
+            (const_int 2 [0x2]))) sched.c:23# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [214])
+        (minus:SI (reg:SI 2 $2 [214])
+            (reg:SI 3 $3 [212]))) sched.c:23# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [215])
+        (ashift:SI (reg:SI 2 $2 [214])
+            (const_int 3 [0x3]))) sched.c:23# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [211])
+        (minus:SI (reg:SI 3 $3 [215])
+            (reg:SI 2 $2 [214]))) sched.c:23# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [211])
+        (plus:SI (reg/f:SI 4 $4 [210])
+            (reg/f:SI 2 $2 [211]))) sched.c:23# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:195 D.1004 ] [195])
+        (mem/j:SI (plus:SI (reg/f:SI 2 $2 [211])
+                (const_int 156 [0x9c])) [ envs[Next_EnvNum.0_3].env_status+0 S4 A32])) sched.c:23# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [216])
+        (const_int 1 [0x1])) sched.c:23# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 3 $3 [orig:195 D.1004 ] [195])
+                (reg:SI 2 $2 [216]))
+            (label_ref #)
+            (pc))) sched.c:23# {*branch_equalitysi}
+     (nil)
+ -> 3)
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [217])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [218])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [217])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:25# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ iTemp+0 S4 A32])
+        (reg:SI 2 $2 [218])) sched.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [219])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:196 Next_EnvNum.1 ] [196])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [219])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:26# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:197 Next_EnvNum.2 ] [197])
+        (plus:SI (reg:SI 2 $2 [orig:196 Next_EnvNum.1 ] [196])
+            (const_int 1 [0x1]))) sched.c:26# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [220])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [220])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])
+        (reg:SI 3 $3 [orig:197 Next_EnvNum.2 ] [197])) sched.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [221])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:198 Next_EnvNum.3 ] [198])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [221])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [224])
+        (const_int -2147483648 [0xffffffff80000000])) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [223])
+        (ior:SI (reg:SI 2 $2 [224])
+            (const_int 63 [0x3f]))) sched.c:27# {*iorsi3}
+     (expr_list:REG_EQUAL (const_int -2147483585 [0xffffffff8000003f])
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (and:SI (reg:SI 3 $3 [orig:198 Next_EnvNum.3 ] [198])
+            (reg:SI 2 $2 [223]))) sched.c:27# {*andsi3}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ge (reg:SI 2 $2 [222])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) sched.c:27# {*branch_ordersi}
+     (nil)
+ -> 4)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (plus:SI (reg:SI 2 $2 [222])
+            (const_int -1 [0xffffffffffffffff]))) sched.c:27# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [225])
+        (const_int -64 [0xffffffffffffffc0])) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (ior:SI (reg:SI 2 $2 [222])
+            (reg:SI 3 $3 [225]))) sched.c:27# {*iorsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [222])
+        (plus:SI (reg:SI 2 $2 [222])
+            (const_int 1 [0x1]))) sched.c:27# {*addsi3}
+     (nil))
+(code_label 4 0 0 4 "" [1 uses])
+(note# 0 0 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [orig:199 Next_EnvNum.4 ] [199])
+        (reg:SI 2 $2 [222])) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [226])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [226])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])
+        (reg:SI 3 $3 [orig:199 Next_EnvNum.4 ] [199])) sched.c:27# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [227])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ iTemp+0 S4 A32])) sched.c:28# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:28# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [227])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) sched.c:28# {*branch_equalitysi}
+     (nil)
+ -> 5)
+(note# 0 0 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 4 $4 [228])
+        (high:SI (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [229])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ iTemp+0 S4 A32])) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:31# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [231])
+        (reg:SI 2 $2 [229])) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [232])
+        (ashift:SI (reg:SI 3 $3 [231])
+            (const_int 3 [0x3]))) sched.c:31# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [231])
+        (reg:SI 2 $2 [232])) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [233])
+        (ashift:SI (reg:SI 3 $3 [231])
+            (const_int 2 [0x2]))) sched.c:31# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [233])
+        (minus:SI (reg:SI 2 $2 [233])
+            (reg:SI 3 $3 [231]))) sched.c:31# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [234])
+        (ashift:SI (reg:SI 2 $2 [233])
+            (const_int 3 [0x3]))) sched.c:31# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [234])
+        (minus:SI (reg:SI 3 $3 [234])
+            (reg:SI 2 $2 [233]))) sched.c:31# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [235])
+        (lo_sum:SI (reg:SI 4 $4 [228])
+            (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:31# {*lowsi}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [230])
+        (plus:SI (reg:SI 3 $3 [234])
+            (reg:SI 2 $2 [235]))) sched.c:31# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:200 D.1013 ] [200])
+        (mem/j:SI (plus:SI (reg/f:SI 2 $2 [230])
+                (const_int 152 [0x98])) [ envs[iTemp_5].env_id+0 S4 A32])) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:31# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:202 id.5 ] [202])
+        (and:SI (reg:SI 2 $2 [orig:201 D.1014 ] [201])
+            (const_int 63 [0x3f]))) sched.c:31# {*andsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ id+0 S4 A64])
+        (reg:SI 2 $2 [orig:202 id.5 ] [202])) sched.c:31# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [236])
+        (high:SI (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>))) sched.c:34# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [236])
+            (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>))) sched.c:34# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC0") [flags 0x2] <var_decl # *$LC0>)
+        (nil)))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printf") [flags 0x41] <function_decl # printf>) [ printf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:34# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [237])
+        (plus:SI (reg/f:SI 30 $fp)
+            (const_int 24 [0x18]))) sched.c:35# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 2 $2 [237])) sched.c:35# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("print_num_hex2") [flags 0x41] <function_decl # print_num_hex2>) [ print_num_hex2 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:35# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [238])
+        (high:SI (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>))) sched.c:36# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [238])
+            (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>))) sched.c:36# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC1") [flags 0x2] <var_decl # *$LC1>)
+        (nil)))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printf") [flags 0x41] <function_decl # printf>) [ printf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:36# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [239])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 20 [0x14])) [ iTemp+0 S4 A32])) sched.c:37# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:37# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [240])
+        (reg:SI 2 $2 [239])) sched.c:37# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [241])
+        (ashift:SI (reg:SI 3 $3 [240])
+            (const_int 3 [0x3]))) sched.c:37# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [240])
+        (reg:SI 2 $2 [241])) sched.c:37# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [242])
+        (ashift:SI (reg:SI 3 $3 [240])
+            (const_int 2 [0x2]))) sched.c:37# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [242])
+        (minus:SI (reg:SI 2 $2 [242])
+            (reg:SI 3 $3 [240]))) sched.c:37# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [243])
+        (ashift:SI (reg:SI 2 $2 [242])
+            (const_int 3 [0x3]))) sched.c:37# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [243])
+        (minus:SI (reg:SI 3 $3 [243])
+            (reg:SI 2 $2 [242]))) sched.c:37# {subsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [245])
+        (high:SI (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:37# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [244])
+        (lo_sum:SI (reg:SI 2 $2 [245])
+            (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>))) sched.c:37# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("envs") [flags 0x40] <var_decl # envs>)
+        (nil)))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:203 D.1016 ] [203])
+        (plus:SI (reg:SI 3 $3 [243])
+            (reg:SI 2 $2 [244]))) sched.c:37# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg/f:SI 2 $2 [orig:203 D.1016 ] [203])) sched.c:37# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("env_run") [flags 0x41] <function_decl # env_run>) [ env_run S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:37# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #))# {*jump_absolute}
+     (nil)
+ -> 5)
+(barrier 0 0 0)
+(code_label 3 0 0 3 "" [1 uses])
+(note# 0 0 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [246])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:42# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:204 Next_EnvNum.6 ] [204])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [246])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:42# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:42# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:205 Next_EnvNum.7 ] [205])
+        (plus:SI (reg:SI 2 $2 [orig:204 Next_EnvNum.6 ] [204])
+            (const_int 1 [0x1]))) sched.c:42# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [247])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:42# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [247])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])
+        (reg:SI 3 $3 [orig:205 Next_EnvNum.7 ] [205])) sched.c:42# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [248])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:206 Next_EnvNum.8 ] [206])
+        (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [248])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [251])
+        (const_int -2147483648 [0xffffffff80000000])) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [250])
+        (ior:SI (reg:SI 2 $2 [251])
+            (const_int 63 [0x3f]))) sched.c:43# {*iorsi3}
+     (expr_list:REG_EQUAL (const_int -2147483585 [0xffffffff8000003f])
+        (nil)))
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (and:SI (reg:SI 3 $3 [orig:206 Next_EnvNum.8 ] [206])
+            (reg:SI 2 $2 [250]))) sched.c:43# {*andsi3}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ge (reg:SI 2 $2 [249])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) sched.c:43# {*branch_ordersi}
+     (nil)
+ -> 6)
+(note# 0 0 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (plus:SI (reg:SI 2 $2 [249])
+            (const_int -1 [0xffffffffffffffff]))) sched.c:43# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [252])
+        (const_int -64 [0xffffffffffffffc0])) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (ior:SI (reg:SI 2 $2 [249])
+            (reg:SI 3 $3 [252]))) sched.c:43# {*iorsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [249])
+        (plus:SI (reg:SI 2 $2 [249])
+            (const_int 1 [0x1]))) sched.c:43# {*addsi3}
+     (nil))
+(code_label 6 0 0 6 "" [1 uses])
+(note# 0 0 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [orig:207 Next_EnvNum.9 ] [207])
+        (reg:SI 2 $2 [249])) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [253])
+        (high:SI (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>))) sched.c:43# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (lo_sum:SI (reg:SI 2 $2 [253])
+                (symbol_ref:SI ("Next_EnvNum") [flags 0x40] <var_decl # Next_EnvNum>)) [ Next_EnvNum+0 S4 A32])
+        (reg:SI 3 $3 [orig:207 Next_EnvNum.9 ] [207])) sched.c:43# {*movsi_internal}
+     (nil))
+(code_label 5 0 0 5 "" [2 uses])
+(note# 0 0 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [255])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])) sched.c:21# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:21# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [254])
+        (plus:SI (reg:SI 2 $2 [255])
+            (const_int 1 [0x1]))) sched.c:21# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])
+        (reg:SI 2 $2 [254])) sched.c:21# {*movsi_internal}
+     (nil))
+(code_label 2 0 0 2 "" [1 uses])
+(note# 0 0 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [256])
+        (mem/c:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ i+0 S4 A32])) sched.c:21# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) sched.c:21# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [257])
+        (le:SI (reg:SI 2 $2 [256])
+            (const_int 63 [0x3f]))) sched.c:21# {*sle_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [257])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) sched.c:21# {*branch_equalitysi}
+     (nil)
+ -> 7)
+(note# 0 0 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [258])
+        (high:SI (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>))) sched.c:47# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [258])
+            (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>))) sched.c:47# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC2") [flags 0x2] <var_decl # *$LC2>)
+        (nil)))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printf") [flags 0x41] <function_decl # printf>) [ printf S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:47# {call_internal}
+     (nil)
+    (expr_list:REG_LABEL_TARGET (use (reg:SI 4 $4))
+        (nil)))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("env_idle_run") [flags 0x41] <function_decl # env_idle_run>) [ env_idle_run S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) sched.c:49# {call_internal}
+     (nil)
+    (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) sched.c:51#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) sched.c:51# {*movsi_internal}
+     (expr_list:REG_CFA_DEF_CFA (plus:SI (reg/f:SI 29 $sp)
+            (const_int 40 [0x28]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 36 [0x24])) [ S4 A32])) sched.c:51# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 32 [0x20])) [ S4 A32])) sched.c:51# {*movsi_internal}
+     (nil))
+(insn# 0 0 (clobber (mem/c:BLK (reg/f:SI 29 $sp) [ A8])) sched.c:51#
+     (nil))
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 40 [0x28]))) sched.c:51# {*addsi3}
+     (expr_list:REG_CFA_DEF_CFA (reg/f:SI 29 $sp)
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 30 $fp)
+            (expr_list:REG_CFA_RESTORE (reg:SI 31 $31)
+                (nil)))))
+(jump_insn# 0 0 (parallel [
+            (simple_return)
+            (use (reg:SI 31 $31))
+        ]) sched.c:51# {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
