@@ -1,3 +1,10 @@
+Updated in 04/2016
+This was the summer intern project I did in Beihang mentored by Xibo Wu (author of cocoa simulator) and Lei Wang in 2011. This project is tightly related to OS course project where we built couple simple OS components. This is a super interesting and exciting project and it is also exact course and project where I leart most during all my college studies. One bug, in this project, which took me couple days to analyze and eventually solve, played a very critical role in my later couple years. By explainning that to interviewers, it made a big difference and I received couple offers. 
+So in short, what I want say is, what you learnt from a project is much more important than what score/gpa you get from it. Please don't deceive yourself otherwise I'll feel guilty to upload it to github. 
+
+Following is the index and documents I wrote in 2011 summer. Hope it can help you. Please feel free to contact me if you get any question or feedback.
+
+Wrote in 2011 summer			
 /Document是这次实验所用到的所有手册及文档
 
 /MyDoc是这次实验我的全部实验报告
