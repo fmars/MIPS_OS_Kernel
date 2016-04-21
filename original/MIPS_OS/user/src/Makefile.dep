@@ -1,0 +1,6 @@
+start.o: start.S include/asm.h include/regdef.h include/cp0regdef.h \
+ include/regdef.h include/cp0regdef.h
+syscall.o: syscall.S include/asm.h include/regdef.h include/cp0regdef.h \
+ include/regdef.h include/cp0regdef.h
+lib.o: lib.c include/lib.h
+A.o: A.c include/lib.h

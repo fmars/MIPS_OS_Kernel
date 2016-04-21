@@ -1,0 +1,19 @@
+1.修改输出函数console部分，输出目的指向LED
+
+2.修改输出函数printf部分，将参数unsigned int改为int。结果导致程序崩溃，不得其解。最后吴师兄解释说，这是	cocoa的缺陷，内部设计只提供了unsigned int
+	base_uarto / base_led
+3.添加汇编输出函数uput，主要用于调试，放在start.S中
+
+4.修改了异常处理的汇编代码，使之与cocoa一致且能够正确运行，改动较大，详见具体代码。
+	大致内容包括
+		start.S中start_timer
+		interupt.S中int_entry与handle_int
+		env_ams.S中env_pop_tf
+
+5.跟正了hanle_int中bug，使三个用户进程可以稳定运行
+
+6.添加系统调用
+	添加文件syscall_all.c、syscall_lib.c、syscall_wrap.S、syscall.S
+	修改Makefile
+	测试部分在env.c中env_A。
+	虽然系统调用已经可以正确调用幷执行，但是在代码中使用了一些取巧的方法，而且由于没有MMU部件，也还没考虑具体如何分配内存，以及如果采用从外部加载用户进程分配内存的具体规则，因此没有仔细完善和测试这部分内容，但毫无疑问的是这部分代码离满意还差得很远。

@@ -1,0 +1,150 @@
+
+;; Function (pa2sector) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -8 [0xfffffffffffffff8]))) pmap.c:7# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 4 [0x4])) [ S4 A32])
+        (reg/f:SI 30 $fp)) pmap.c:7# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 4 [0x4])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) pmap.c:7# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ pa+0 S4 A32])
+        (reg:SI 4 $4 [ pa ])) pmap.c:7# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 3 $3 [199])
+        (mem/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 8 [0x8])) [ pa+0 S4 A32])) pmap.c:8# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [200])
+        (const_int -2147483648 [0xffffffff80000000])) pmap.c:8# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1552 ] [194])
+        (plus:SI (reg:SI 3 $3 [199])
+            (reg:SI 2 $2 [200]))) pmap.c:8# {*addsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 D.1553 ] [195])
+        (lshiftrt:SI (reg:SI 2 $2 [orig:194 D.1552 ] [194])
+            (const_int 20 [0x14]))) pmap.c:8# {*lshrsi3}
+     (expr_list:REG_EQUAL (udiv:SI (reg:SI 2 $2 [orig:194 D.1552 ] [194])
+            (const_int 1048576 [0x100000]))
+        (nil)))
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 D.1554 ] [196])
+        (ashift:SI (reg:SI 2 $2 [orig:195 D.1553 ] [195])
+            (const_int 2 [0x2]))) pmap.c:8# {*ashlsi3}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [202])
+        (high:SI (symbol_ref:SI ("sectors") <var_decl # sectors>))) pmap.c:8# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [201])
+        (lo_sum:SI (reg:SI 2 $2 [202])
+            (symbol_ref:SI ("sectors") <var_decl # sectors>))) pmap.c:8# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sectors") <var_decl # sectors>)
+        (nil)))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:197 D.1551 ] [197])
+        (plus:SI (reg:SI 3 $3 [orig:196 D.1554 ] [196])
+            (reg:SI 2 $2 [201]))) pmap.c:8# {*addsi3}
+     (nil))
+(insn# 0 0 (use (reg/i:SI 2 $2)) pmap.c:9#
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) pmap.c:9# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 4 [0x4])) [ S4 A32])) pmap.c:9# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 8 [0x8]))) pmap.c:9# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) pmap.c:9# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (memmory_init) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -24 [0xffffffffffffffe8]))) pmap.c:12# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 31 $31)) pmap.c:12# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 20 [0x14])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg/f:SI 30 $fp)) pmap.c:12# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 16 [0x10])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) pmap.c:12# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [194])
+        (high:SI (symbol_ref:SI ("sectors") <var_decl # sectors>))) pmap.c:13# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (lo_sum:SI (reg:SI 2 $2 [194])
+            (symbol_ref:SI ("sectors") <var_decl # sectors>))) pmap.c:13# {*lowsi}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("sectors") <var_decl # sectors>)
+        (nil)))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (const_int 2048 [0x800])) pmap.c:13# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("bzero") [flags 0x41] <function_decl # bzero>) [ S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) pmap.c:13# {call_internal}
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:SI 5 $5))
+        (expr_list:REG_DEP_TRUE (use (reg:SI 4 $4))
+            (nil))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) pmap.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])) pmap.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])) pmap.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))) pmap.c:15# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) pmap.c:15# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)

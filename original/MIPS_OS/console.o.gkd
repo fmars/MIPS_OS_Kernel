@@ -1,0 +1,347 @@
+
+;; Function (printcharc) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -16 [0xfffffffffffffff0]))) console.c:50# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])
+        (reg/f:SI 30 $fp)) console.c:50# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 12 [0xc])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) console.c:50# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (reg:SI 2 $2 [197])
+        (reg:SI 4 $4 [ ch ])) console.c:50# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c/i:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 16 [0x10])) [ ch+0 S1 A32])
+        (reg:QI 2 $2 [197])) console.c:50# {*movqi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [199])
+        (const_int -1610612736 [0xffffffffa0000000])) console.c:53# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [198])
+        (ior:SI (reg:SI 2 $2 [199])
+            (const_int 1280 [0x500]))) console.c:53# {*iorsi3}
+     (expr_list:REG_EQUAL (const_int -1610611456 [0xffffffffa0000500])
+        (nil)))
+(insn# 0 0 (set (mem/f/c/i:SI (reg/f:SI 30 $fp) [ p_uart+0 S4 A32])
+        (reg:SI 2 $2 [198])) console.c:53# {*movsi_internal}
+     (nil))
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (const_int 0 [0]) console.c:55# {nop}
+     (nil))
+(code_label 2 0 0 2 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [200])
+        (mem/f/c/i:SI (reg/f:SI 30 $fp) [ p_uart+0 S4 A32])) console.c:55# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:55# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1559 ] [194])
+        (mem/s:SI (plus:SI (reg/f:SI 2 $2 [200])
+                (const_int 16 [0x10])) [+16 S4 A32])) console.c:55# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:55# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 D.1560 ] [195])
+        (and:SI (reg:SI 2 $2 [orig:194 D.1559 ] [194])
+            (const_int 32 [0x20]))) console.c:55# {*andsi3}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (eq (reg:SI 2 $2 [orig:195 D.1560 ] [195])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) console.c:55# {*branch_equalitysi}
+     (nil)
+ -> 2)
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 3 $3 [orig:196 D.1561 ] [196])
+        (zero_extend:SI (mem/c/i:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 16 [0x10])) [ ch+0 S1 A32]))) console.c:57# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [201])
+        (mem/f/c/i:SI (reg/f:SI 30 $fp) [ p_uart+0 S4 A32])) console.c:57# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:57# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (mem/s/j:SI (reg/f:SI 2 $2 [201]) [ p_uart_1->data+0 S4 A32])
+        (reg:SI 3 $3 [orig:196 D.1561 ] [196])) console.c:57# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) console.c:61# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])) console.c:61# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 16 [0x10]))) console.c:61# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) console.c:61# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (halt) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -8 [0xfffffffffffffff8]))) console.c:65# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 4 [0x4])) [ S4 A32])
+        (reg/f:SI 30 $fp)) console.c:65# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 4 [0x4])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) console.c:65# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [195])
+        (const_int -1610612736 [0xffffffffa0000000])) console.c:66# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 2 $2 [orig:194 D.1558 ] [194])
+        (ior:SI (reg:SI 2 $2 [195])
+            (const_int 1296 [0x510]))) console.c:66# {*iorsi3}
+     (expr_list:REG_EQUAL (const_int -1610611440 [0xffffffffa0000510])
+        (nil)))
+(insn# 0 0 (set (mem/v:QI (reg/f:SI 2 $2 [orig:194 D.1558 ] [194]) [ *D.1558_1+0 S1 A8])
+        (const_int 0 [0])) console.c:66# {*movqi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) console.c:67# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 4 [0x4])) [ S4 A32])) console.c:67# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 8 [0x8]))) console.c:67# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) console.c:67# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (printstr) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -24 [0xffffffffffffffe8]))) console.c:72# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (reg:SI 31 $31)) console.c:72# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 20 [0x14])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (reg/f:SI 30 $fp)) console.c:72# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 16 [0x10])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) console.c:72# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ s+0 S4 A32])
+        (reg:SI 4 $4 [ s ])) console.c:72# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) console.c:73# {*jump_absolute}
+     (nil)
+ -> 5)
+(barrier 0 0 0)
+(code_label 6 0 0 6 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [197])
+        (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ s+0 S4 A32])) console.c:74# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:74# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:195 D.1555 ] [195])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [197]) [ *s_1+0 S1 A8]))) console.c:74# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [198])
+        (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ s+0 S4 A32])) console.c:74# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:74# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 3 $3 [199])
+        (plus:SI (reg:SI 3 $3 [198])
+            (const_int 1 [0x1]))) console.c:74# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ s+0 S4 A32])
+        (reg:SI 3 $3 [199])) console.c:74# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (reg:SI 2 $2 [orig:196 D.1556 ] [196])) console.c:74# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (call (mem:SI (symbol_ref:SI ("printcharc") [flags 0x3] <function_decl # printcharc>) [ S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 $31))
+        ]) console.c:74# {call_internal}
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:SI 4 $4))
+        (nil)))
+(code_label 5 0 0 5 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg/f:SI 2 $2 [200])
+        (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 24 [0x18])) [ s+0 S4 A32])) console.c:73# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:73# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1557 ] [194])
+        (zero_extend:SI (mem:QI (reg/f:SI 2 $2 [200]) [ *s_1+0 S1 A8]))) console.c:73# {*zero_extendqisi2}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:73# {hazard_nop}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [orig:194 D.1557 ] [194])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) console.c:73# {*branch_equalitysi}
+     (nil)
+ -> 6)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) console.c:75# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])) console.c:75# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])) console.c:75# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 24 [0x18]))) console.c:75# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) console.c:75# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (delay_loop) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -16 [0xfffffffffffffff0]))) console.c:80# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])
+        (reg/f:SI 30 $fp)) console.c:80# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 12 [0xc])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) console.c:80# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem/c/i:SI (reg/f:SI 30 $fp) [ j+0 S4 A32])
+        (const_int 0 [0])) console.c:82# {*movsi_internal}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (label_ref #)) console.c:82# {*jump_absolute}
+     (nil)
+ -> 8)
+(barrier 0 0 0)
+(code_label 9 0 0 9 "" [1 uses])
+(note# 0 0 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [194])
+        (mem/c/i:SI (reg/f:SI 30 $fp) [ j+0 S4 A32])) console.c:82# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:82# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [195])
+        (plus:SI (reg:SI 2 $2 [194])
+            (const_int 1 [0x1]))) console.c:82# {*addsi3}
+     (nil))
+(insn# 0 0 (set (mem/c/i:SI (reg/f:SI 30 $fp) [ j+0 S4 A32])
+        (reg:SI 2 $2 [195])) console.c:82# {*movsi_internal}
+     (nil))
+(code_label 8 0 0 8 "" [1 uses])
+(note# 0 0 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn# 0 0 (set (reg:SI 2 $2 [196])
+        (mem/c/i:SI (reg/f:SI 30 $fp) [ j+0 S4 A32])) console.c:82# {*movsi_internal}
+     (nil))
+(insn# 0 0 (const_int 1 [0x1]) console.c:82# {hazard_nop}
+     (nil))
+(insn# 0 0 (set (reg:SI 2 $2 [197])
+        (le:SI (reg:SI 2 $2 [196])
+            (const_int 103 [0x67]))) console.c:82# {*sle_sisi}
+     (nil))
+(jump_insn# 0 0 (set (pc)
+        (if_then_else (ne (reg:SI 2 $2 [197])
+                (const_int 0 [0]))
+            (label_ref #)
+            (pc))) console.c:82# {*branch_equalitysi}
+     (nil)
+ -> 9)
+(note# 0 0 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) console.c:84# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 12 [0xc])) [ S4 A32])) console.c:84# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 16 [0x10]))) console.c:84# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) console.c:84# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)

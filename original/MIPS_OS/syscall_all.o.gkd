@@ -1,0 +1,265 @@
+
+;; Function (syscall_putchar) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) syscall_all.c:14# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) syscall_all.c:14# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) syscall_all.c:14# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) syscall_all.c:14# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (reg:SI 2 $2 [195])
+        (reg:SI 4 $4 [ ch ])) syscall_all.c:14# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem/c/i:QI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ ch+0 S1 A32])
+        (reg:QI 2 $2 [195])) syscall_all.c:14# {*movqi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (reg:SI 2 $2 [orig:194 D.1617 ] [194])
+        (sign_extend:SI (mem/c/i:QI (plus:SI (reg/f:SI 30 $fp)
+                    (const_int 32 [0x20])) [ ch+0 S1 A32]))) syscall_all.c:15# {*extendqisi2}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (const_int 0 [0])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (reg:SI 2 $2 [orig:194 D.1617 ] [194])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 0 [0])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) syscall_all.c:15# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("pds_syscall") [flags 0x41] <function_decl # pds_syscall>) [ S4 A32])
+                    (const_int 24 [0x18])))
+            (clobber (reg:SI 31 $31))
+        ]) syscall_all.c:15# {call_value_internal}
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:SI 7 $7))
+        (expr_list:REG_DEP_TRUE (use (reg:SI 6 $6))
+            (expr_list:REG_DEP_TRUE (use (reg:SI 5 $5))
+                (expr_list:REG_DEP_TRUE (use (reg:SI 4 $4))
+                    (nil))))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) syscall_all.c:16# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])) syscall_all.c:16# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])) syscall_all.c:16# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))) syscall_all.c:16# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) syscall_all.c:16# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (syscall_printf) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) syscall_all.c:19# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) syscall_all.c:19# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) syscall_all.c:19# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) syscall_all.c:19# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(insn# 0 0 (set (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ fmt+0 S4 A32])
+        (reg:SI 4 $4 [ fmt ])) syscall_all.c:19# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (const_int 1 [0x1])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (mem/f/c/i:SI (plus:SI (reg/f:SI 30 $fp)
+                (const_int 32 [0x20])) [ fmt+0 S4 A32])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 0 [0])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) syscall_all.c:20# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("pds_syscall") [flags 0x41] <function_decl # pds_syscall>) [ S4 A32])
+                    (const_int 24 [0x18])))
+            (clobber (reg:SI 31 $31))
+        ]) syscall_all.c:20# {call_value_internal}
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:SI 7 $7))
+        (expr_list:REG_DEP_TRUE (use (reg:SI 6 $6))
+            (expr_list:REG_DEP_TRUE (use (reg:SI 5 $5))
+                (expr_list:REG_DEP_TRUE (use (reg:SI 4 $4))
+                    (nil))))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) syscall_all.c:21# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])) syscall_all.c:21# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])) syscall_all.c:21# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))) syscall_all.c:21# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) syscall_all.c:21# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)
+
+;; Function (syscall_exit) 
+
+(note# 0 0 NOTE_INSN_DELETED)
+(note# 0 0 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int -32 [0xffffffffffffffe0]))) syscall_all.c:24# {*addsi3}
+     (nil))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])
+        (reg:SI 31 $31)) syscall_all.c:24# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 28 [0x1c])) [ S4 A32])
+            (reg:SI 31 $31))
+        (nil)))
+(insn/f# 0 0 (set (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])
+        (reg/f:SI 30 $fp)) syscall_all.c:24# {*movsi_internal}
+     (expr_list:REG_FRAME_RELATED_EXPR (set/f (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                    (const_int 24 [0x18])) [ S4 A32])
+            (reg/f:SI 30 $fp))
+        (nil)))
+(insn/f# 0 0 (set (reg/f:SI 30 $fp)
+        (reg/f:SI 29 $sp)) syscall_all.c:24# {*movsi_internal}
+     (nil))
+(note# 0 0 NOTE_INSN_PROLOGUE_END)
+(note# 0 0 NOTE_INSN_FUNCTION_BEG)
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 16 [0x10])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (mem:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 20 [0x14])) [ S4 A32])
+        (const_int 0 [0])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 4 $4)
+        (const_int 2 [0x2])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 5 $5)
+        (const_int 0 [0])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 6 $6)
+        (const_int 0 [0])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 7 $7)
+        (const_int 0 [0])) syscall_all.c:25# {*movsi_internal}
+     (nil))
+(call_insn# 0 0 (parallel [
+            (set (reg:SI 2 $2)
+                (call (mem:SI (symbol_ref:SI ("pds_syscall") [flags 0x41] <function_decl # pds_syscall>) [ S4 A32])
+                    (const_int 24 [0x18])))
+            (clobber (reg:SI 31 $31))
+        ]) syscall_all.c:25# {call_value_internal}
+     (nil)
+    (expr_list:REG_DEP_TRUE (use (reg:SI 7 $7))
+        (expr_list:REG_DEP_TRUE (use (reg:SI 6 $6))
+            (expr_list:REG_DEP_TRUE (use (reg:SI 5 $5))
+                (expr_list:REG_DEP_TRUE (use (reg:SI 4 $4))
+                    (nil))))))
+(note# 0 0 NOTE_INSN_EPILOGUE_BEG)
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (reg/f:SI 30 $fp)) syscall_all.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg:SI 31 $31)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 28 [0x1c])) [ S4 A32])) syscall_all.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 30 $fp)
+        (mem/c:SI (plus:SI (reg/f:SI 29 $sp)
+                (const_int 24 [0x18])) [ S4 A32])) syscall_all.c:26# {*movsi_internal}
+     (nil))
+(insn# 0 0 (set (reg/f:SI 29 $sp)
+        (plus:SI (reg/f:SI 29 $sp)
+            (const_int 32 [0x20]))) syscall_all.c:26# {*addsi3}
+     (nil))
+(jump_insn# 0 0 (parallel [
+            (return)
+            (use (reg:SI 31 $31))
+        ]) syscall_all.c:26# {return_internal}
+     (nil))
+(barrier 0 0 0)
+(note# 0 0 NOTE_INSN_DELETED)

@@ -1,0 +1,12 @@
+1.syscall.S	添加系统调用处理函数handle_sys
+  幷添加系统调用表
+
+2.syscall_all.c	实现对应的系统调用
+
+3.include/unistd.h	为用户调用注册调用号
+
+4.include/lib.h	声明调用
+
+5.syscall_wrap.S	使用mysyscall触发软中断
+
+6.系统陷入内核态，进入中断入口0xbfc00380

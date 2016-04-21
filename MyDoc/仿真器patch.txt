@@ -1,0 +1,29 @@
+1.修改address.c中fake_output_bits32
+	为了方便观察输出，修改fake_output_bits32(unsigned int bits)的内容为
+	printf("%c",bits);
+
+
+2.修改icu.c中update_interrupt
+		irmmap = (icuReg.irr & ICU_IRR_IRMAP_MASK & (~icuReg.imr));
+		改为
+		irmmap = (icuReg.irr & ICU_IRR_IRMAP_MASK & (icuReg.imr));
+	其中icuReg.imr为中断向量控制寄存器，每位分别代表是否开启对应的中断，且1为开，0为关。
+
+
+3.修改timer.c中timer_count
+		if (timerReg[tunnel].count == 0 && timerReg[tunnel].out) {
+		改为
+		if (timerReg[tunnel].count == 0 && !timerReg[tunnel].out) {
+
+4.修改cp0.c中check_cp0_exception
+		cp0Reg.sr |= CP0_SR_IE_MASK;
+		改为
+		cp0Reg.sr |= CP0_SR_IE_MASK;
+		cp0Reg.sr ^= CP0_SR_IE_MASK;
+	当检测出确实有异常发生后，修改sr位，置0
+
+5.修改cp0.c中signal_exception
+		cp0Reg.sr |= CP0_SR_IE_MASK;
+		改为
+		cp0Reg.sr |= CP0_SR_IE_MASK;
+		cp0Reg.sr ^= CP0_SR_IE_MASK;

@@ -1,0 +1,38 @@
+一.本文档将详细分析由时钟信号引发的时钟中断处理流程以及COCOA架构的处理机制
+
+二.流程
+1.时钟中断导致的异常
+	计时器置为0号工作模式，当计时器count到0，触发时钟中断信号
+
+2.进入0xbfc00400的 int_entry
+	CLI 关中断 ---> 置CP0_STATUS最低位为0，也就是c0_sr
+	修改EPC,记录异常地址，用作异常处理后返回
+	分析异常原因---> 读CP0_CAUSE，幷跳转到相应处理函数--->handle_int
+
+3.handle_int
+	SAVE_ALL保存寄存器
+		把sp指向TIMESTACK(0x90800000)stackframe.拉开一个存储空间
+		将cp0和cpu的寄存器压栈
+		还原sp
+	跳转到time_irq
+
+4.time_irq
+	跳转到sched_yield
+
+5.sched_yield
+	找到下一个运行的进程
+	env_run
+
+6.env_run
+	若当前进程有，则将异常栈上寄存器的内容拷到这个进程控制块内
+	curenv = e
+	env_pop_tf
+7.env_pop_tf
+	将栈上的寄存器弹出，得到保存的EPC，继续按照EPC指向的地址运行
+	
+三.NOTICE
+	1.进入int_entry后，为了保证原子性，CLI关中断这一步是CPU硬件完成的，因此在操作系统中无需在出现相关代码
+	2.由于COCOA并没有采用延时槽技术，因此为了实现一条指令同时完成开中断与地址跳转了功能，引入了eret指令。相当如MIPS1中断 rfe指令。
+	3.COCOA中实际的中断向量入口地址与文档中有所不同，实际为
+		flasher中异常入口0xbfc00380
+		flasher中中断入口0xbfc00400
